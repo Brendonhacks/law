@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Highlights | Marshal Abubakar</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ===== GLOBAL RESET & VARIABLES ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --font-headline: 'Newsreader', serif;
+        --font-body: 'Inter', sans-serif;
+        
+        --color-primary: #000666;
+        --color-secondary: #775a19;
+        --color-secondary-fixed: #ffdea5;
+        --color-secondary-fixed-dim: #e9c176;
+        --color-on-primary: #ffffff;
+        --color-on-secondary: #ffffff;
+        --color-on-secondary-container: #785a1a;
+        --color-on-secondary-fixed: #261900;
+        --color-on-secondary-fixed-variant: #5d4201;
+        --color-secondary-container: #fed488;
+        --color-surface-container: #eeeeee;
+        --color-surface-container-lowest: #ffffff;
+        --color-surface-container-low: #f3f3f3;
+        --color-surface-container-high: #e8e8e8;
+        --color-surface-container-highest: #e2e2e2;
+        --color-surface: #f9f9f9;
+        --color-surface-bright: #f9f9f9;
+        --color-surface-dim: #dadada;
+        --color-background: #f9f9f9;
+        --color-on-background: #1a1c1c;
+        --color-on-surface: #1a1c1c;
+        --color-on-surface-variant: #454652;
+        --color-outline: #767683;
+        --color-outline-variant: #c6c5d4;
+        --color-primary-container: #1a237e;
+        --color-on-primary-container: #8690ee;
+        --color-primary-fixed: #e0e0ff;
+        --color-primary-fixed-dim: #bdc2ff;
+        --color-on-primary-fixed: #000767;
+        --color-on-primary-fixed-variant: #343d96;
+        --color-tertiary: #0d1d24;
+        --color-tertiary-container: #22323a;
+        --color-on-tertiary: #ffffff;
+        --color-on-tertiary-container: #899aa3;
+        --color-tertiary-fixed: #d4e5ef;
+        --color-tertiary-fixed-dim: #b8c9d3;
+        --color-on-tertiary-fixed: #0d1e25;
+        --color-on-tertiary-fixed-variant: #394951;
+        --color-error: #ba1a1a;
+        --color-on-error: #ffffff;
+        --color-error-container: #ffdad6;
+        --color-on-error-container: #93000a;
+        --color-inverse-surface: #2f3131;
+        --color-inverse-on-surface: #f1f1f1;
+        --color-inverse-primary: #bdc2ff;
+        --color-surface-tint: #4c56af;
+        --color-surface-variant: #e2e2e2;
+        --color-white: #ffffff;
+        --color-zinc-50: #fafafa;
+        --color-zinc-100: #f4f4f5;
+        --color-zinc-200: #e4e4e7;
+        --color-zinc-400: #a1a1aa;
+        --color-zinc-500: #71717a;
+        --color-zinc-600: #52525b;
+        --color-zinc-800: #27272a;
+        --color-zinc-900: #18181b;
+        --color-zinc-950: #09090b;
+        --color-amber-500: #f59e0b;
+        --color-amber-600: #d97706;
+        --color-amber-700: #b45309;
+        --color-slate-900: #0f172a;
+        
+        --spacing-unit-xs: 4px;
+        --spacing-unit-sm: 8px;
+        --spacing-unit-md: 16px;
+        --spacing-unit-lg: 24px;
+        --spacing-unit-xl: 48px;
+        --spacing-gutter: 32px;
+        --spacing-margin: 64px;
+        --container-max: 1200px;
+        --max-width-nav: 1440px;
+        
+        --border-radius-default: 0.25rem;
+        --border-radius-lg: 0.5rem;
+        --border-radius-xl: 0.75rem;
+        --border-radius-full: 9999px;
+        
+        --transition-speed: 200ms;
+    }
+
+    body {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: var(--color-on-surface);
+        background-color: var(--color-surface);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Material Symbols base */
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .font-headline-xl {
+        font-family: var(--font-headline);
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+    }
+    .font-headline-lg {
+        font-family: var(--font-headline);
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+    }
+    .font-headline-md {
+        font-family: var(--font-headline);
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    .font-body-lg {
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    .font-body-md {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+    .font-label-caps {
+        font-family: var(--font-body);
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .font-serif {
+        font-family: var(--font-headline);
+    }
+    .text-sm {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .text-xs {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .tracking-widest {
+        letter-spacing: 0.1em;
+    }
+    .tracking-tighter {
+        letter-spacing: -0.05em;
+    }
+    .tracking-tight {
+        letter-spacing: -0.025em;
+    }
+    .font-bold {
+        font-weight: 700;
+    }
+    .font-semibold {
+        font-weight: 600;
+    }
+    .font-medium {
+        font-weight: 500;
+    }
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .italic {
+        font-style: italic;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .leading-relaxed {
+        line-height: 1.625;
+    }
+
+    /* ===== COLORS ===== */
+    .text-primary { color: var(--color-primary); }
+    .text-secondary { color: var(--color-secondary); }
+    .text-secondary-fixed { color: var(--color-secondary-fixed); }
+    .text-on-primary { color: var(--color-on-primary); }
+    .text-on-secondary { color: var(--color-on-secondary); }
+    .text-on-background { color: var(--color-on-background); }
+    .text-on-surface { color: var(--color-on-surface); }
+    .text-on-surface-variant { color: var(--color-on-surface-variant); }
+    .text-white { color: var(--color-white); }
+    .text-zinc-500 { color: var(--color-zinc-500); }
+    .text-zinc-600 { color: var(--color-zinc-600); }
+    .text-slate-900 { color: var(--color-slate-900); }
+    .text-amber-700 { color: var(--color-amber-700); }
+    .text-tertiary { color: var(--color-tertiary); }
+    .text-on-tertiary-fixed-variant { color: var(--color-on-tertiary-fixed-variant); }
+
+    .bg-primary { background-color: var(--color-primary); }
+    .bg-secondary { background-color: var(--color-secondary); }
+    .bg-white { background-color: var(--color-white); }
+    .bg-surface { background-color: var(--color-surface); }
+    .bg-surface-container { background-color: var(--color-surface-container); }
+    .bg-surface-container-low { background-color: var(--color-surface-container-low); }
+    .bg-surface-container-high { background-color: var(--color-surface-container-high); }
+    .bg-primary-container { background-color: var(--color-primary-container); }
+    .bg-zinc-50 { background-color: var(--color-zinc-50); }
+    .bg-zinc-100 { background-color: var(--color-zinc-100); }
+    
+    .border-primary { border-color: var(--color-primary); }
+    .border-secondary { border-color: var(--color-secondary); }
+    .border-outline-variant { border-color: var(--color-outline-variant); }
+    .border-zinc-200 { border-color: var(--color-zinc-200); }
+    .border-amber-600 { border-color: var(--color-amber-600); }
+    
+    .opacity-10 { opacity: 0.1; }
+    .opacity-20 { opacity: 0.2; }
+    .opacity-60 { opacity: 0.6; }
+    .opacity-70 { opacity: 0.7; }
+    .opacity-80 { opacity: 0.8; }
+    .opacity-90 { opacity: 0.9; }
+    .opacity-50 { opacity: 0.5; }
+    .opacity-100 { opacity: 1; }
+
+    /* ===== LAYOUT & SPACING ===== */
+    .container-max {
+        max-width: var(--container-max);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .max-w-3xl { max-width: 48rem; }
+    .max-w-4xl { max-width: 56rem; }
+    .max-w-\[1200px\] { max-width: 1200px; }
+    .max-w-\[1440px\] { max-width: 1440px; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    
+    .px-16 { padding-left: 4rem; padding-right: 4rem; }
+    .px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .p-6 { padding: 1.5rem; }
+    .p-8 { padding: 2rem; }
+    .p-10 { padding: 2.5rem; }
+    .px-margin { padding-left: var(--spacing-margin); padding-right: var(--spacing-margin); }
+    .py-unit-xl { padding-top: var(--spacing-unit-xl); padding-bottom: var(--spacing-unit-xl); }
+    .pl-8 { padding-left: 2rem; }
+    
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-20 { margin-bottom: 5rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .-mr-12 { margin-right: -3rem; }
+    .-mt-12 { margin-top: -3rem; }
+    .gap-2 { gap: 0.5rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-12 { gap: 3rem; }
+    .gap-gutter { gap: var(--spacing-gutter); }
+    .space-y-3 > * + * { margin-top: 0.75rem; }
+    .space-y-gutter > * + * { margin-top: var(--spacing-gutter); }
+
+    /* ===== FLEX & GRID ===== */
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    .hidden { display: none; }
+    .block { display: block; }
+    .inline-block { display: inline-block; }
+    .flex-wrap { flex-wrap: wrap; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .fixed { position: fixed; }
+    .sticky { position: sticky; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .z-10 { z-index: 10; }
+    .z-50 { z-index: 50; }
+    .top-0 { top: 0; }
+    .right-0 { right: 0; }
+    .overflow-hidden { overflow: hidden; }
+    .w-full { width: 100%; }
+    .w-12 { width: 3rem; }
+    .w-24 { width: 6rem; }
+    .h-full { height: 100%; }
+    .h-1 { height: 0.25rem; }
+    .h-24 { height: 6rem; }
+    .h-64 { height: 16rem; }
+    .object-cover { object-fit: cover; }
+    .rounded-full { border-radius: 9999px; }
+    .rounded-none { border-radius: 0; }
+    .border { border-width: 1px; }
+    .border-t { border-top-width: 1px; }
+    .border-b { border-bottom-width: 1px; }
+    .border-l-4 { border-left-width: 4px; }
+    .border-x { border-left-width: 1px; border-right-width: 1px; }
+    .rotate-45 { transform: rotate(45deg); }
+    .grayscale { filter: grayscale(100%); }
+    .transition-all { transition: all var(--transition-speed) ease; }
+    .transition-colors { transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease; }
+    .duration-200 { transition-duration: 200ms; }
+    .duration-300 { transition-duration: 300ms; }
+    .duration-700 { transition-duration: 700ms; }
+    .hover\:bg-opacity-90:hover { opacity: 0.9; }
+    .hover\:bg-primary:hover { background-color: var(--color-primary); }
+    .hover\:text-primary:hover { color: var(--color-primary); }
+    .hover\:text-white:hover { color: white; }
+    .hover\:text-amber-700:hover { color: var(--color-amber-700); }
+    .hover\:text-slate-900:hover { color: var(--color-slate-900); }
+    .hover\:underline:hover { text-decoration: underline; }
+    .hover\:border-secondary:hover { border-color: var(--color-secondary); }
+    .hover\:grayscale-0:hover { filter: grayscale(0); }
+    .underline { text-decoration: underline; }
+    .underline-offset-4 { text-underline-offset: 4px; }
+    .cursor-pointer { cursor: pointer; }
+    .pb-1 { padding-bottom: 0.25rem; }
+    .pt-6 { padding-top: 1.5rem; }
+    .no-underline { text-decoration: none; }
+    .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .active\:opacity-70:active { opacity: 0.7; }
+
+    /* Group hover */
+    .group:hover .group-hover\:bg-secondary { background-color: var(--color-secondary); }
+    .group:hover .group-hover\:text-white { color: white; }
+
+    /* Grid columns */
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-1 { grid-column: span 1 / span 1; }
+
+    /* More Entries Card Style */
+    .more-entry-card {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-primary);
+        padding: 1.5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: border-color 0.2s ease;
+    }
+    .more-entry-card:hover {
+        border-color: var(--color-secondary);
+    }
+
+    /* ===== SIDEBAR STYLES ===== */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 280px;
+        height: 100%;
+        background: white;
+        z-index: 110;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+        padding: 2rem 1.5rem;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar.active {
+        right: 0;
+    }
+    .sidebar-close {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-on-surface);
+        margin-bottom: 2rem;
+        line-height: 1;
+    }
+    .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-family: var(--font-headline);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+    }
+    .sidebar-links a {
+        color: var(--color-on-surface);
+        text-decoration: none;
+        padding-bottom: 0.25rem;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+    }
+    .sidebar-links a:hover {
+        color: var(--color-amber-700);
+        border-bottom-color: var(--color-amber-600);
+    }
+    
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-slate-900);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+        .hidden.md\:flex {
+            display: none !important;
+        }
+        .menu-toggle {
+            display: block;
+        }
+        .px-16 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .px-margin {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .grid-cols-1.md\:grid-cols-12 { grid-template-columns: 1fr; }
+        .md\:col-span-1, .md\:col-span-4, .md\:col-span-6, .md\:col-span-8, .md\:col-span-12 {
+            grid-column: span 1 / span 1;
+        }
+        .md\:w-1\/2 { width: 100%; }
+        .flex-col.md\:flex-row { flex-direction: column; }
+        .font-headline-xl {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        .font-headline-lg {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .mb-20 { margin-bottom: 3rem; }
+        .p-10 { padding: 1.5rem; }
+        .py-12 { padding-top: 2rem; padding-bottom: 2rem; }
+        .text-center.md\:text-left { text-align: center; }
+    }
+    @media (min-width: 769px) {
+        .md\:flex { display: flex; }
+        .md\:inline-block { display: inline-block; }
+        .md\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+        .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .md\:col-span-1 { grid-column: span 1 / span 1; }
+        .md\:col-span-4 { grid-column: span 4 / span 4; }
+        .md\:col-span-6 { grid-column: span 6 / span 6; }
+        .md\:col-span-8 { grid-column: span 8 / span 8; }
+        .md\:col-span-12 { grid-column: span 12 / span 12; }
+        .md\:text-left { text-align: left; }
+    }
+</style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-white border-b border-zinc-200 docked full-width top-0 z-50 sticky">
+<nav class="flex justify-between items-center w-full px-16 py-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-size: 32px; color: #000666;">balance</span>
+<a class="text-2xl font-bold tracking-tighter text-slate-900 font-serif" href="#">
+    Marshal Abubakar
+</a>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="index.html">Home</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="about.html">About</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="practiceareas.html">Practice Areas</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-slate-900 border-b border-amber-600 pb-1 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="casehighlights.html">Case Highlights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="legalinsights.html">Insights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="FAQ.html">FAQ</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label-caps text-xs tracking-widest uppercase hover:bg-opacity-90 transition-all rounded-none" onclick="window.location.href='contact.html'">
+    Contact Us
+</button>
+<button class="menu-toggle material-symbols-outlined" style="font-size: 32px;" id="menuToggle">menu</button>
+</div>
+</nav>
+</header>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+<button class="sidebar-close material-symbols-outlined" id="sidebarClose">close</button>
+<div class="sidebar-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="practiceareas.html">Practice Areas</a>
+<a href="casehighlights.html" style="color: #000666; font-weight: 700;">Case Highlights</a>
+<a href="legalinsights.html">Insights</a>
+<a href="FAQ.html">FAQ</a>
+<a href="contact.html">Contact Us</a>
+</div>
+</div>
+
+<main class="max-w-[1200px] mx-auto px-margin py-unit-xl">
+<!-- Hero Section / Header -->
+<section class="mb-20 border-l-4 border-secondary pl-8">
+<h1 class="font-headline-xl text-primary mb-6">Notable Briefs &amp; Milestones</h1>
+<div class="bg-surface-container p-6 border border-outline-variant max-w-3xl">
+<p class="font-label-caps text-on-surface-variant uppercase mb-2">Mandatory Disclaimer</p>
+<p class="font-body-md text-on-surface italic opacity-80">
+    To maintain strict client-attorney privilege and confidentiality, the following entries are presented in an anonymized format. Details such as names of individuals and corporate entities have been omitted or modified to protect privacy while accurately representing the legal complexity and outcome of the proceedings.
+</p>
+</div>
+</section>
+<!-- Case Highlight Entries -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Featured Case (Asymmetric Layout) -->
+<div class="md:col-span-8 group">
+<div class="bg-white border border-outline-variant p-10 relative overflow-hidden h-full flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-24 h-24 bg-surface-container-high -mr-12 -mt-12 rotate-45"></div>
+<div>
+<span class="font-label-caps text-secondary uppercase mb-4 block">Criminal Defense &amp; Civil Rights</span>
+<h2 class="font-headline-lg text-primary mb-6">Successfully defended a client in a criminal matter at the FCT High Court</h2>
+<p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+    This complex litigation involved multi-layered allegations of procedural misconduct. Through rigorous examination of forensic evidence and cross-examination of state witnesses, the defense established a critical failure in the chain of custody, leading to a full acquittal.
+</p>
+</div>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="font-label-caps text-on-surface">JURISDICTION: FCT HIGH COURT</span>
+</div>
+</div>
+</div>
+<!-- Sidebar Context -->
+<div class="md:col-span-4 space-y-gutter">
+<div class="bg-primary-container text-white p-8">
+<h3 class="font-headline-md mb-4 text-secondary-fixed">Analytical Precision</h3>
+<p class="font-body-md opacity-90 leading-relaxed mb-6">
+    Every brief handled by the chambers of Marshal Abubakar undergoes a tripartite review process: Intellectual Rigor, Statutory Compliance, and Strategic Foresight.
+</p>
+<div class="h-1 w-12 bg-secondary"></div>
+</div>
+<div class="relative h-64 border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-50 transition-all duration-700" data-alt="Close-up of classic leather-bound law books on a mahogany shelf in a traditional library with warm soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9coR1nUiV3wL12e1FI4iB22Nkiw1Si6Z7_3ZSSfnw5RfCBFZsqEyvN0x0Qv1nuV1Bhk8tYGg2QCPpRCNWk6j3QSYwBaIZJ8VonY0ebLfDYsol73j5hZxUa0dCBIC-81mTbmEUnOSMb9hnvVh6q63WdBDrT7W2vRYyxxEJjl5jY_QSS4LH6fEEheuuySz4Z04EuxJHe-WDkvnReJ77G1GEYsxs66W8VyXdYBeVSsHVSponLvlqeLD9X5l-EErqIqk0Wrj1rXkZ9KC2"/>
+</div>
+</div>
+<!-- Grid Entries -->
+<div class="md:col-span-6">
+<div class="bg-surface-container-low border border-outline-variant p-8 h-full flex flex-col justify-between hover:border-secondary transition-colors">
+<div>
+<span class="font-label-caps text-on-tertiary-fixed-variant uppercase mb-4 block">Property &amp; Land Law</span>
+<h3 class="font-headline-md text-tertiary mb-4">Represented a family in a land inheritance dispute</h3>
+<p class="font-body-md text-on-surface-variant mb-6">
+    Resolved a long-standing dispute involving customary land rights versus statutory certificates of occupancy. Navigated intricate family lineage claims to secure ancestral titles.
+</p>
+</div>
+<div class="text-secondary font-label-caps flex items-center gap-2">
+<span class="material-symbols-outlined">landscape</span>
+    SETTLED VIA MEDIATION &amp; COURT JUDGMENT
+</div>
+</div>
+</div>
+<div class="md:col-span-6">
+<div class="bg-white border border-outline-variant p-8 h-full flex flex-col justify-between hover:border-secondary transition-colors">
+<div>
+<span class="font-label-caps text-on-tertiary-fixed-variant uppercase mb-4 block">Corporate Governance</span>
+<h3 class="font-headline-md text-tertiary mb-4">Advisory on Cross-Border Merger Compliance</h3>
+<p class="font-body-md text-on-surface-variant mb-6">
+    Lead counsel for a regional fintech entity during acquisition. Ensured full compliance with SEC and CBN regulations, overseeing the transfer of liabilities and intellectual property assets.
+</p>
+</div>
+<div class="text-secondary font-label-caps flex items-center gap-2">
+<span class="material-symbols-outlined">corporate_fare</span>
+    REGULATORY CLEARANCE OBTAINED
+</div>
+</div>
+</div>
+<!-- Full Width Statement -->
+<div class="md:col-span-12 py-12 px-8 bg-zinc-100 border-x border-secondary">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">verified_user</span>
+<h4 class="font-headline-lg text-primary mb-4 italic">"The hallmark of true advocacy is not the volume of the voice, but the weight of the argument."</h4>
+<p class="font-label-caps text-on-surface-variant tracking-widest">CHAMBERS OF MARSHAL ABUBAKAR</p>
+</div>
+</div>
+<!-- More Entries -->
+<div class="md:col-span-4">
+<div class="more-entry-card">
+<div>
+<h3 class="font-headline-md text-primary mb-2">Public Interest Litigation</h3>
+<p class="font-body-md text-on-surface-variant mb-4 italic">Successfully challenged administrative overreach in a municipal zoning matter.</p>
+</div>
+<span class="font-label-caps text-secondary">2023 RECOVERY</span>
+</div>
+</div>
+<div class="md:col-span-4">
+<div class="more-entry-card">
+<div>
+<h3 class="font-headline-md text-primary mb-2">Employment Arbitration</h3>
+<p class="font-body-md text-on-surface-variant mb-4 italic">Negotiated high-value severance for a C-suite executive following wrongful termination.</p>
+</div>
+<span class="font-label-caps text-secondary">PRIVATE SETTLEMENT</span>
+</div>
+</div>
+<div class="md:col-span-4">
+<div class="more-entry-card">
+<div>
+<h3 class="font-headline-md text-primary mb-2">Maritime Law Advisory</h3>
+<p class="font-body-md text-on-surface-variant mb-4 italic">Provided legal framework for a shipping consortium regarding cabotage law compliance.</p>
+</div>
+<span class="font-label-caps text-secondary">COMPLIANCE ACHIEVED</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 border-t border-zinc-200 flat no-shadow">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 max-w-[1440px] mx-auto text-slate-900 font-serif text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-slate-900 font-serif mb-4 block">Marshal Abubakar</span>
+<p class="text-zinc-600 mb-6">Providing intellectual rigor and authoritative counsel across the Nigerian federation.</p>
+<div class="flex gap-4">
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">The Chambers</h4>
+<p class="text-zinc-600">Suite 402, High Court Plaza<br/>Central Business District<br/>Abuja, Nigeria</p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Legal Disclaimer</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">NBA Verification</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Hours</h4>
+<p class="text-zinc-600">Monday — Friday<br/>09:00 AM — 05:00 PM WAT</p>
+<div class="mt-6 flex items-center gap-2 text-amber-700 font-medium">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="font-label-caps text-[10px]">Open for Consultations</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-16 py-8 border-t border-zinc-200 text-center text-xs opacity-50 uppercase tracking-widest font-label-caps">
+    © 2026 Marshal Abubakar. All Rights Reserved. Authorized for Counsel in Nigeria.
+</div>
+</footer>
+
+<script>
+(function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const closeBtn = document.getElementById('sidebarClose');
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  menuToggle.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+})();
+</script>
+</body></html>

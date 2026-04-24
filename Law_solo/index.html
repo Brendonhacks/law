@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffdea5",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#899aa3",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#0d1e25",
+                    "surface-tint": "#4c56af",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-container": "#785a1a",
+                    "outline-variant": "#c6c5d4",
+                    "on-surface": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "secondary-container": "#fed488",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary-fixed": "#e0e0ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "inverse-primary": "#bdc2ff",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary-fixed": "#000767",
+                    "tertiary-fixed": "#d4e5ef",
+                    "on-primary-container": "#8690ee",
+                    "primary-container": "#1a237e",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-dim": "#dadada",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed-variant": "#343d96",
+                    "background": "#f9f9f9",
+                    "secondary": "#775a19",
+                    "primary": "#000666",
+                    "tertiary-fixed-dim": "#b8c9d3",
+                    "tertiary": "#0d1d24",
+                    "outline": "#767683",
+                    "on-secondary-fixed": "#261900",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#394951",
+                    "surface-bright": "#f9f9f9",
+                    "on-surface-variant": "#454652",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "tertiary-container": "#22323a",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "surface-container": "#eeeeee"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit-lg": "24px",
+                    "unit-xl": "48px",
+                    "gutter": "32px",
+                    "margin": "64px",
+                    "container-max": "1200px",
+                    "unit-md": "16px",
+                    "unit-xs": "4px",
+                    "unit-sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Newsreader"],
+                    "label-caps": ["Inter"],
+                    "headline-xl": ["Newsreader"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Newsreader"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+        
+        /* Sidebar styles */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 280px;
+            height: 100%;
+            background: white;
+            z-index: 110;
+            box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+            padding: 2rem 1.5rem;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar.active {
+            right: 0;
+        }
+        .sidebar-close {
+            align-self: flex-end;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #1a1c1c;
+            margin-bottom: 2rem;
+            line-height: 1;
+        }
+        .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-family: 'Newsreader', serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+        .sidebar-links a {
+            color: #1a1c1c;
+            text-decoration: none;
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .sidebar-links a:hover {
+            color: #b45309;
+            border-bottom-color: #d97706;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #0f172a;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 docked full-width top-0 z-50 flat no-shadow">
+<nav class="flex justify-between items-center w-full px-16 py-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-size: 32px; color: #000666;">balance</span>
+<a class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-zinc-50 font-serif" href="#">
+                Marshal Abubakar
+            </a>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-slate-900 dark:text-white border-b border-amber-600 pb-1 cursor-pointer opacity-100 active:opacity-70 hover:text-amber-700 dark:hover:text-amber-500 transition-colors duration-200" href="#">Home</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 dark:text-zinc-400 cursor-pointer opacity-100 active:opacity-70 hover:text-amber-700 dark:hover:text-amber-500 transition-colors duration-200" href="about.html">About</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 dark:text-zinc-400 cursor-pointer opacity-100 active:opacity-70 hover:text-amber-700 dark:hover:text-amber-500 transition-colors duration-200" href="practiceareas.html">Practice Areas</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 dark:text-zinc-400 cursor-pointer opacity-100 active:opacity-70 hover:text-amber-700 dark:hover:text-amber-500 transition-colors duration-200" href="casehighlights.html">Case Highlights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 dark:text-zinc-400 cursor-pointer opacity-100 active:opacity-70 hover:text-amber-700 dark:hover:text-amber-500 transition-colors duration-200" href="legalinsights.html">Insights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 dark:text-zinc-400 cursor-pointer opacity-100 active:opacity-70 hover:text-amber-700 dark:hover:text-amber-500 transition-colors duration-200" href="FAQ.html">FAQ</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label-caps text-xs tracking-widest uppercase hover:bg-opacity-90 transition-all rounded-none" onclick="window.location.href='contact.html'">
+                Contact Us
+            </button>
+<button class="menu-toggle material-symbols-outlined" style="font-size: 32px;" id="menuToggle">menu</button>
+</div>
+</nav>
+</header>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+<button class="sidebar-close material-symbols-outlined" id="sidebarClose">close</button>
+<div class="sidebar-links">
+<a href="#">Home</a>
+<a href="about.html">About</a>
+<a href="practiceareas.html">Practice Areas</a>
+<a href="casehighlights.html">Case Highlights</a>
+<a href="legalinsights.html">Insights</a>
+<a href="FAQ.html">FAQ</a>
+<a href="contact.html" style="color: #000666; font-weight: 700;">Contact Us</a>
+</div>
+</div>
+
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-primary text-white">
+<div class="absolute inset-0 opacity-20 grayscale mix-blend-overlay">
+<img alt="Supreme Court of Nigeria architecture" class="w-full h-full object-cover" 
+data-alt="Monochrome wide shot of the grand neoclassical architecture of the Supreme Court of Nigeria with high columns and dramatic shadows" 
+src="https://cdn.vanguardngr.com/wp-content/uploads/2025/03/supreme-court.jpeg"/>
+</div>
+<div class="container-max mx-auto px-margin relative z-10 py-unit-xl">
+<div class="max-w-3xl">
+<span class="inline-block px-3 py-1 bg-secondary text-white font-label-caps text-[10px] tracking-[0.2em] uppercase mb-unit-lg">
+                        Legal Excellence
+                    </span>
+<h1 class="font-headline-xl text-white mb-unit-sm">
+                        Marshal Abubakar
+                    </h1>
+<p class="font-headline-md italic text-secondary-fixed mb-unit-md opacity-90">
+                        Barrister &amp; Solicitor of the Supreme Court of Nigeria
+                    </p>
+<p class="font-body-lg text-white opacity-80 mb-unit-xl leading-relaxed max-w-xl">
+                        Trusted Legal Representation Across Nigeria, Rooted in Abuja. Dedicated to the pursuit of justice with intellectual rigor and cultural grounding.
+                    </p>
+<div class="flex flex-wrap gap-unit-md">
+<button class="bg-secondary text-white px-unit-lg py-unit-md font-label-caps uppercase text-sm tracking-wider hover:bg-opacity-90 transition-all">
+                            Schedule a Consultation
+                        </button>
+<button class="border border-white/30 text-white px-unit-lg py-unit-md font-label-caps uppercase text-sm tracking-wider hover:bg-white hover:text-primary transition-all">
+                            View Practice Areas
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Strip -->
+<section class="bg-surface-container border-b border-outline-variant/30">
+<div class="max-w-[1440px] mx-auto px-16 py-8 flex flex-wrap justify-between items-center opacity-60 grayscale brightness-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+<span class="font-label-caps text-xs">Supreme Court Licensed</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+<span class="font-label-caps text-xs">NBA Member</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl">gavel</span>
+<span class="font-label-caps text-xs">Bar Council Registered</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl">history_edu</span>
+<span class="font-label-caps text-xs">Abuja Legal Society</span>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-unit-xl bg-white">
+<div class="max-w-[1440px] mx-auto px-margin grid md:grid-cols-2 gap-unit-xl items-center">
+<div>
+<h2 class="font-headline-lg text-primary mb-unit-md">Counsel Rooted in Integrity</h2>
+<p class="font-body-lg text-on-surface-variant mb-unit-md leading-relaxed">
+                        With a profound understanding of Nigerian jurisprudence and an unwavering commitment to our clients, Barrister Marshal Abubakar offers sophisticated legal solutions tailored to individual and corporate needs.
+                    </p>
+<p class="font-body-md text-on-surface-variant/80 mb-unit-lg italic">
+                        "The law is not just a profession; it is a pillar of society. Our mission is to ensure that this pillar remains strong and accessible for those we represent."
+                    </p>
+<div class="grid grid-cols-2 gap-unit-md">
+<div class="border-l-4 border-secondary pl-unit-md">
+<span class="block font-headline-md text-primary">15+</span>
+<span class="font-label-caps text-xs opacity-70">Years of Experience</span>
+</div>
+<div class="border-l-4 border-secondary pl-unit-md">
+<span class="block font-headline-md text-primary">500+</span>
+<span class="font-label-caps text-xs opacity-70">Cases Resolved</span>
+</div>
+</div>
+</div>
+<div class="relative p-unit-lg">
+<div class="absolute inset-0 border border-secondary/20 translate-x-4 translate-y-4"></div>
+<img alt="Professional law office interior" class="relative z-10 w-full h-[500px] object-cover grayscale" data-alt="Interior of a luxury law library in Abuja with dark wood shelving, leather books, and a single focused desk lamp casting warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-dJwI4odVolZLRU0Ptff2gyDkhyzjjTblJ_f3RPzI900phALA5ANiO1vFzUeUu8DtA0vLc8DPZOAghEfgfBJlDxX5lIoNyC89SFS8BYfb10aDv1NYSdhMWka_qzhhjpyE5VBHV5eJ4S_pHlFP6Pzq1KsQ9CFRyzK6yOYO8ypl-7OiXtt04RLY8EzFg-GtkE4gm82hvAqOHPFcRJHYSiYnCRuB4iofTeYbHIRVFStaENkyIS_EB5cBeory1dC6LxaRLZpd876yGBB"/>
+</div>
+</div>
+</section>
+<!-- Practice Areas -->
+<section class="py-unit-xl bg-surface">
+<div class="max-w-[1440px] mx-auto px-margin">
+<div class="text-center mb-unit-xl">
+<h2 class="font-headline-lg text-primary mb-unit-sm">Practice Areas</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-white p-unit-lg border border-outline-variant/30 hover:border-secondary transition-colors group">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center mb-unit-md group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">family_restroom</span>
+</div>
+<h3 class="font-headline-md text-primary mb-unit-sm">Family Law</h3>
+<p class="font-body-md text-on-surface-variant mb-unit-lg">Compassionate counsel for divorce, custody, and inheritance matters across Nigeria.</p>
+<a class="font-label-caps text-xs text-secondary hover:underline" href="practiceareas.html">Learn More →</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-unit-lg border border-outline-variant/30 hover:border-secondary transition-colors group">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center mb-unit-md group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">domain</span>
+</div>
+<h3 class="font-headline-md text-primary mb-unit-sm">Property Law</h3>
+<p class="font-body-md text-on-surface-variant mb-unit-lg">Expert navigation of real estate transactions, title verification, and land disputes.</p>
+<a class="font-label-caps text-xs text-secondary hover:underline" href="practiceareas.html">Learn More →</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-unit-lg border border-outline-variant/30 hover:border-secondary transition-colors group">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center mb-unit-md group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">security</span>
+</div>
+<h3 class="font-headline-md text-primary mb-unit-sm">Criminal Defence</h3>
+<p class="font-body-md text-on-surface-variant mb-unit-lg">Vigorous defense strategies protecting your rights and liberty in the court of law.</p>
+<a class="font-label-caps text-xs text-secondary hover:underline" href="practiceareas.html">Learn More →</a>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-unit-lg border border-outline-variant/30 hover:border-secondary transition-colors group">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center mb-unit-md group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">business_center</span>
+</div>
+<h3 class="font-headline-md text-primary mb-unit-sm">Corporate Advisory</h3>
+<p class="font-body-md text-on-surface-variant mb-unit-lg">Strategic legal consulting for Nigerian businesses, startups, and international firms.</p>
+<a class="font-label-caps text-xs text-secondary hover:underline" href="practiceareas.html">Learn More →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Insight -->
+<section class="py-unit-xl bg-white">
+<div class="max-w-[1440px] mx-auto px-margin">
+<div class="flex flex-col md:flex-row items-center gap-unit-xl bg-primary-container p-unit-xl text-on-primary-container relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary opacity-10 rounded-full -mr-32 -mt-32"></div>
+<div class="md:w-1/2 relative z-10">
+<span class="font-label-caps text-xs tracking-widest text-secondary mb-unit-sm block">FEATURED INSIGHT</span>
+<h2 class="font-headline-lg mb-unit-md text-white">Navigating Real Estate Compliance in Abuja</h2>
+<p class="font-body-md mb-unit-lg opacity-80">A comprehensive guide to understanding the recent shifts in property legislation and how they impact investors in the Federal Capital Territory.</p>
+<button class="bg-secondary text-white px-unit-lg py-unit-md font-label-caps text-xs tracking-widest uppercase hover:bg-opacity-90" href="legalinsights.html" >Read Full Article</button>
+</div>
+<div class="md:w-1/2">
+<img alt="Modern Abuja skyline" class="w-full h-64 object-cover border border-secondary/30 shadow-2xl" 
+data-alt="Sunlit aerial view of modern architectural buildings in Abuja, Nigeria, showing clean lines and urban growth under a clear blue sky" 
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHLMgc7NKchUT3AwZ6fVJfDW0Li_wBTRQUGZ2BPqJ31Wo2P2U8lFBz1zjvKBEVNbypj9yhMqqsRNrMV3pesV8UyeKHaGFtq58o_OQ73xcYQpuK6s0qtWvaWxGl5ZLqqRlFcenA_9QAQJ0Rpd-d71mjpPBhz3wc9mZG7a6VkLGWXNvCnw_Xbv9RYcQ9IdWLkuSn76Jbsr8SEsRgOElwbytL27x-Swj7HqjnJokfD73r4QBmFtdo_Moh2-kxrlfQ9Pm2KVQnToJWEHZ0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-surface text-center">
+<div class="max-w-3xl mx-auto px-margin">
+<h2 class="font-headline-xl text-primary mb-unit-md">Secure Your Future with Principled Representation</h2>
+<p class="font-body-lg text-on-surface-variant mb-unit-xl">
+                    Barrister Marshal Abubakar is available for private and corporate consultations. Contact us today to discuss your legal requirements.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-unit-md">
+	<a href="contact.html" class="bg-primary text-white px-12 py-5 font-label-caps text-sm tracking-widest uppercase hover:bg-opacity-90 transition-all inline-block">
+		Request a Consultation
+	</a>
+	<a href="contact.html" class="border border-primary text-primary px-12 py-5 font-label-caps text-sm tracking-widest uppercase hover:bg-primary hover:text-white transition-all inline-block">
+		Call Our Chambers
+	</a>
+</div>
+<div class="mt-unit-xl pt-unit-xl border-t border-outline-variant/30 flex justify-center gap-unit-xl opacity-60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-caps text-xs">+234 (0) 800-MARSHAL</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-caps text-xs">counsel@marshalabubakar.com</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 full-width bottom-0 flat no-shadow">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 max-w-[1440px] mx-auto text-slate-900 dark:text-zinc-100 font-serif text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-slate-900 dark:text-zinc-50 font-serif mb-4 block">Marshal Abubakar</span>
+<p class="text-zinc-600 dark:text-zinc-400 mb-6">Providing intellectual rigor and authoritative counsel across the Nigerian federation.</p>
+<div class="flex gap-4">
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">The Chambers</h4>
+<p class="text-zinc-600 dark:text-zinc-400">Suite 402, High Court Plaza<br/>Central Business District<br/>Abuja, Nigeria</p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-zinc-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white underline underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white underline underline-offset-4 transition-all duration-300" href="#">Legal Disclaimer</a></li>
+<li><a class="text-zinc-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white underline underline-offset-4 transition-all duration-300" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white underline underline-offset-4 transition-all duration-300" href="#">NBA Verification</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Hours</h4>
+<p class="text-zinc-600 dark:text-zinc-400">Monday — Friday<br/>09:00 AM — 05:00 PM WAT</p>
+<div class="mt-6 flex items-center gap-2 text-amber-700 font-medium">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="font-label-caps text-[10px]">Open for Consultations</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-16 py-8 border-t border-zinc-200 dark:border-zinc-800 text-center text-xs opacity-50 uppercase tracking-widest font-label-caps">
+            © 2026 Marshal Abubakar. All Rights Reserved. Authorized for Counsel in Nigeria.
+        </div>
+</footer>
+
+<script>
+(function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const closeBtn = document.getElementById('sidebarClose');
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  menuToggle.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+})();
+</script>
+</body></html>

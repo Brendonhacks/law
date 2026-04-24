@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQs | Marshal Abubakar</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&amp;family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ===== GLOBAL RESET & VARIABLES ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --font-headline: 'Newsreader', serif;
+        --font-body: 'Inter', sans-serif;
+        
+        --color-primary: #000666;
+        --color-secondary: #775a19;
+        --color-secondary-fixed: #ffdea5;
+        --color-secondary-fixed-dim: #e9c176;
+        --color-on-primary: #ffffff;
+        --color-on-secondary: #ffffff;
+        --color-on-secondary-container: #785a1a;
+        --color-on-secondary-fixed: #261900;
+        --color-on-secondary-fixed-variant: #5d4201;
+        --color-secondary-container: #fed488;
+        --color-surface-container: #eeeeee;
+        --color-surface-container-lowest: #ffffff;
+        --color-surface-container-low: #f3f3f3;
+        --color-surface-container-high: #e8e8e8;
+        --color-surface-container-highest: #e2e2e2;
+        --color-surface: #f9f9f9;
+        --color-surface-bright: #f9f9f9;
+        --color-surface-dim: #dadada;
+        --color-background: #f9f9f9;
+        --color-on-background: #1a1c1c;
+        --color-on-surface: #1a1c1c;
+        --color-on-surface-variant: #454652;
+        --color-outline: #767683;
+        --color-outline-variant: #c6c5d4;
+        --color-primary-container: #1a237e;
+        --color-on-primary-container: #8690ee;
+        --color-primary-fixed: #e0e0ff;
+        --color-primary-fixed-dim: #bdc2ff;
+        --color-on-primary-fixed: #000767;
+        --color-on-primary-fixed-variant: #343d96;
+        --color-tertiary: #0d1d24;
+        --color-tertiary-container: #22323a;
+        --color-on-tertiary: #ffffff;
+        --color-on-tertiary-container: #899aa3;
+        --color-tertiary-fixed: #d4e5ef;
+        --color-tertiary-fixed-dim: #b8c9d3;
+        --color-on-tertiary-fixed: #0d1e25;
+        --color-on-tertiary-fixed-variant: #394951;
+        --color-error: #ba1a1a;
+        --color-on-error: #ffffff;
+        --color-error-container: #ffdad6;
+        --color-on-error-container: #93000a;
+        --color-inverse-surface: #2f3131;
+        --color-inverse-on-surface: #f1f1f1;
+        --color-inverse-primary: #bdc2ff;
+        --color-surface-tint: #4c56af;
+        --color-surface-variant: #e2e2e2;
+        --color-white: #ffffff;
+        --color-zinc-50: #fafafa;
+        --color-zinc-200: #e4e4e7;
+        --color-zinc-400: #a1a1aa;
+        --color-zinc-500: #71717a;
+        --color-zinc-600: #52525b;
+        --color-zinc-800: #27272a;
+        --color-zinc-900: #18181b;
+        --color-zinc-950: #09090b;
+        --color-amber-500: #f59e0b;
+        --color-amber-600: #d97706;
+        --color-amber-700: #b45309;
+        --color-slate-900: #0f172a;
+        --color-slate-200: #e2e8f0;
+        --color-slate-400: #94a3b8;
+        --color-slate-500: #64748b;
+        --color-slate-800: #1e293b;
+        --color-slate-900: #0f172a;
+        --color-slate-950: #020617;
+        --color-indigo-200: #c7d2fe;
+        --color-indigo-400: #818cf8;
+        --color-indigo-900: #312e81;
+        
+        --spacing-unit-xs: 4px;
+        --spacing-unit-sm: 8px;
+        --spacing-unit-md: 16px;
+        --spacing-unit-lg: 24px;
+        --spacing-unit-xl: 48px;
+        --spacing-gutter: 32px;
+        --spacing-margin: 64px;
+        --container-max: 1200px;
+        --max-width-nav: 1440px;
+        
+        --border-radius-default: 0.25rem;
+        --border-radius-lg: 0.5rem;
+        --border-radius-xl: 0.75rem;
+        --border-radius-full: 9999px;
+        
+        --transition-speed: 200ms;
+    }
+
+    body {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: var(--color-on-background);
+        background-color: var(--color-background);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Material Symbols base */
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .font-headline-xl {
+        font-family: var(--font-headline);
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+    }
+    .font-headline-lg {
+        font-family: var(--font-headline);
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+    }
+    .font-headline-md {
+        font-family: var(--font-headline);
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    .font-body-lg {
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    .font-body-md {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+    .font-label-caps {
+        font-family: var(--font-body);
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .font-serif {
+        font-family: var(--font-headline);
+    }
+    .text-sm {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .text-xs {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+    .tracking-widest {
+        letter-spacing: 0.1em;
+    }
+    .tracking-tighter {
+        letter-spacing: -0.05em;
+    }
+    .tracking-tight {
+        letter-spacing: -0.025em;
+    }
+    .tracking-\[0\.2em\] {
+        letter-spacing: 0.2em;
+    }
+    .font-bold {
+        font-weight: 700;
+    }
+    .font-black {
+        font-weight: 900;
+    }
+    .font-semibold {
+        font-weight: 600;
+    }
+    .font-medium {
+        font-weight: 500;
+    }
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .italic {
+        font-style: italic;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .leading-relaxed {
+        line-height: 1.625;
+    }
+
+    /* ===== COLORS ===== */
+    .text-primary { color: var(--color-primary); }
+    .text-secondary { color: var(--color-secondary); }
+    .text-secondary-fixed { color: var(--color-secondary-fixed); }
+    .text-on-primary { color: var(--color-on-primary); }
+    .text-on-secondary { color: var(--color-on-secondary); }
+    .text-on-background { color: var(--color-on-background); }
+    .text-on-surface { color: var(--color-on-surface); }
+    .text-on-surface-variant { color: var(--color-on-surface-variant); }
+    .text-white { color: var(--color-white); }
+    .text-zinc-500 { color: var(--color-zinc-500); }
+    .text-zinc-600 { color: var(--color-zinc-600); }
+    .text-slate-500 { color: var(--color-slate-500); }
+    .text-slate-900 { color: var(--color-slate-900); }
+    .text-amber-700 { color: var(--color-amber-700); }
+    .text-indigo-900 { color: var(--color-indigo-900); }
+    .text-on-primary-container { color: var(--color-on-primary-container); }
+    .text-on-secondary-fixed { color: var(--color-on-secondary-fixed); }
+
+    .bg-primary { background-color: var(--color-primary); }
+    .bg-secondary { background-color: var(--color-secondary); }
+    .bg-white { background-color: var(--color-white); }
+    .bg-surface { background-color: var(--color-surface); }
+    .bg-surface-container { background-color: var(--color-surface-container); }
+    .bg-secondary-fixed { background-color: var(--color-secondary-fixed); }
+    .bg-zinc-50 { background-color: var(--color-zinc-50); }
+    .bg-slate-50 { background-color: #f8fafc; }
+    
+    .border-primary { border-color: var(--color-primary); }
+    .border-secondary { border-color: var(--color-secondary); }
+    .border-outline-variant { border-color: var(--color-outline-variant); }
+    .border-zinc-200 { border-color: var(--color-zinc-200); }
+    .border-slate-200 { border-color: var(--color-slate-200); }
+    .border-amber-600 { border-color: var(--color-amber-600); }
+    .border-b-2 { border-bottom-width: 2px; }
+    
+    .opacity-10 { opacity: 0.1; }
+    .opacity-20 { opacity: 0.2; }
+    .opacity-60 { opacity: 0.6; }
+    .opacity-70 { opacity: 0.7; }
+    .opacity-80 { opacity: 0.8; }
+    .opacity-90 { opacity: 0.9; }
+    .opacity-50 { opacity: 0.5; }
+    .opacity-100 { opacity: 1; }
+
+    /* ===== LAYOUT & SPACING ===== */
+    .container-max {
+        max-width: var(--container-max);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .max-w-3xl { max-width: 48rem; }
+    .max-w-xl { max-width: 36rem; }
+    .max-w-screen-2xl { max-width: 1536px; }
+    .max-w-\[1440px\] { max-width: 1440px; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    
+    .px-16 { padding-left: 4rem; padding-right: 4rem; }
+    .px-12 { padding-left: 3rem; padding-right: 3rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .p-16 { padding: 4rem; }
+    .p-unit-lg { padding: var(--spacing-unit-lg); }
+    .px-margin { padding-left: var(--spacing-margin); padding-right: var(--spacing-margin); }
+    .px-unit-lg { padding-left: var(--spacing-unit-lg); padding-right: var(--spacing-unit-lg); }
+    .py-unit-sm { padding-top: var(--spacing-unit-sm); padding-bottom: var(--spacing-unit-sm); }
+    .py-unit-xl { padding-top: var(--spacing-unit-xl); padding-bottom: var(--spacing-unit-xl); }
+    .pb-unit-xl { padding-bottom: var(--spacing-unit-xl); }
+    .pl-unit-md { padding-left: var(--spacing-unit-md); }
+    .pt-32 { padding-top: 8rem; }
+    
+    .mb-unit-sm { margin-bottom: var(--spacing-unit-sm); }
+    .mb-unit-md { margin-bottom: var(--spacing-unit-md); }
+    .mb-unit-lg { margin-bottom: var(--spacing-unit-lg); }
+    .mb-unit-xl { margin-bottom: var(--spacing-unit-xl); }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mt-12 { margin-top: 3rem; }
+    .mt-32 { margin-top: 8rem; }
+    .gap-unit-md { gap: var(--spacing-unit-md); }
+    .gap-unit-lg { gap: var(--spacing-unit-lg); }
+    .gap-unit-xl { gap: var(--spacing-unit-xl); }
+    .gap-gutter { gap: var(--spacing-gutter); }
+    .gap-2 { gap: 0.5rem; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-12 { gap: 3rem; }
+    .space-y-unit-sm > * + * { margin-top: var(--spacing-unit-sm); }
+    .space-y-unit-md > * + * { margin-top: var(--spacing-unit-md); }
+    .space-y-unit-lg > * + * { margin-top: var(--spacing-unit-lg); }
+    .space-y-3 > * + * { margin-top: 0.75rem; }
+    .space-y-24 > * + * { margin-top: 6rem; }
+
+    /* ===== FLEX & GRID ===== */
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    .hidden { display: none; }
+    .block { display: block; }
+    .inline-block { display: inline-block; }
+    .flex-wrap { flex-wrap: wrap; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .fixed { position: fixed; }
+    .sticky { position: sticky; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .z-10 { z-index: 10; }
+    .z-50 { z-index: 50; }
+    .top-0 { top: 0; }
+    .top-40 { top: 10rem; }
+    .overflow-hidden { overflow: hidden; }
+    .w-full { width: 100%; }
+    .h-full { height: 100%; }
+    .rounded-full { border-radius: 9999px; }
+    .rounded-none { border-radius: 0; }
+    .border { border-width: 1px; }
+    .border-t { border-top-width: 1px; }
+    .border-b { border-bottom-width: 1px; }
+    .border-l-2 { border-left-width: 2px; }
+    .transition-all { transition: all var(--transition-speed) ease; }
+    .transition-colors { transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease; }
+    .duration-200 { transition-duration: 200ms; }
+    .duration-300 { transition-duration: 300ms; }
+    .hover\:bg-opacity-90:hover { opacity: 0.9; }
+    .hover\:bg-secondary-fixed-dim:hover { background-color: var(--color-secondary-fixed-dim); }
+    .hover\:bg-primary:hover { background-color: var(--color-primary); }
+    .hover\:text-primary:hover { color: var(--color-primary); }
+    .hover\:text-indigo-900:hover { color: var(--color-indigo-900); }
+    .hover\:text-amber-700:hover { color: var(--color-amber-700); }
+    .hover\:text-slate-900:hover { color: var(--color-slate-900); }
+    .hover\:border-secondary:hover { border-color: var(--color-secondary); }
+    .hover\:underline:hover { text-decoration: underline; }
+    .underline { text-decoration: underline; }
+    .underline-offset-4 { text-underline-offset: 4px; }
+    .cursor-pointer { cursor: pointer; }
+    .pb-1 { padding-bottom: 0.25rem; }
+    .no-underline { text-decoration: none; }
+    .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .active\:opacity-70:active { opacity: 0.7; }
+    .active\:opacity-80:active { opacity: 0.8; }
+
+    /* Group hover */
+    .group:hover .group-hover\:bg-secondary { background-color: var(--color-secondary); }
+    .group:hover .group-hover\:text-white { color: white; }
+
+    /* Grid columns */
+    .grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-1 { grid-column: span 1 / span 1; }
+    .col-span-12 { grid-column: span 12 / span 12; }
+
+    /* Scroll margin */
+    .scroll-mt-40 { scroll-margin-top: 10rem; }
+
+    /* Judicial line */
+    .judicial-line {
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0%, #775a19 50%, transparent 100%);
+        opacity: 0.3;
+    }
+
+    /* ===== SIDEBAR STYLES ===== */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 280px;
+        height: 100%;
+        background: white;
+        z-index: 110;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+        padding: 2rem 1.5rem;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar.active {
+        right: 0;
+    }
+    .sidebar-close {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-on-surface);
+        margin-bottom: 2rem;
+        line-height: 1;
+    }
+    .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-family: var(--font-headline);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+    }
+    .sidebar-links a {
+        color: var(--color-on-surface);
+        text-decoration: none;
+        padding-bottom: 0.25rem;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+    }
+    .sidebar-links a:hover {
+        color: var(--color-amber-700);
+        border-bottom-color: var(--color-amber-600);
+    }
+    
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-slate-900);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+        .hidden.md\:flex {
+            display: none !important;
+        }
+        .menu-toggle {
+            display: block;
+        }
+        .px-16 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .px-margin {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .grid-cols-12 { grid-template-columns: 1fr; }
+        .col-span-12.md\:col-span-3, .col-span-12.md\:col-span-9 {
+            grid-column: span 1 / span 1;
+        }
+        .flex-col.md\:flex-row { flex-direction: column; }
+        .font-headline-xl {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        .font-headline-lg {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .p-16 { padding: 2rem; }
+        .pt-32 { padding-top: 4rem; }
+        .mt-32 { margin-top: 4rem; }
+        .space-y-24 > * + * { margin-top: 3rem; }
+    }
+    @media (min-width: 769px) {
+        .md\:flex { display: flex; }
+        .md\:inline-block { display: inline-block; }
+        .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .md\:col-span-1 { grid-column: span 1 / span 1; }
+        .md\:col-span-3 { grid-column: span 3 / span 3; }
+        .md\:col-span-9 { grid-column: span 9 / span 9; }
+        .md\:flex-row { flex-direction: row; }
+    }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-white border-b border-zinc-200 fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center w-full px-16 py-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-size: 32px; color: #000666;">balance</span>
+<a class="text-2xl font-bold tracking-tighter text-slate-900 font-serif" href="#">
+    Marshal Abubakar
+</a>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="index.html">Home</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="about.html">About</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="practiceareas.html">Practice Areas</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="casehighlights.html">Case Highlights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="legalinsights.html">Insights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-slate-900 border-b border-amber-600 pb-1 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="FAQ.html">FAQ</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label-caps text-xs tracking-widest uppercase hover:bg-opacity-90 transition-all rounded-none" onclick="window.location.href='contact.html'">
+    Contact Us
+</button>
+<button class="menu-toggle material-symbols-outlined" style="font-size: 32px;" id="menuToggle">menu</button>
+</div>
+</nav>
+</header>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+<button class="sidebar-close material-symbols-outlined" id="sidebarClose">close</button>
+<div class="sidebar-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="practiceareas.html">Practice Areas</a>
+<a href="casehighlights.html">Case Highlights</a>
+<a href="legalinsights.html">Insights</a>
+<a href="FAQ.html" style="color: #000666; font-weight: 700;">FAQ</a>
+<a href="contact.html">Contact Us</a>
+</div>
+</div>
+
+<main class="pt-32 pb-unit-xl">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-margin mb-unit-xl">
+<div class="max-w-3xl">
+<h1 class="font-headline-xl text-primary mb-unit-md">Frequently Asked Questions</h1>
+<p class="font-body-lg text-on-surface-variant border-l-2 border-secondary pl-unit-md">
+    These answers provide general guidance regarding our practice and engagement protocols. For specific legal advice tailored to your matter, please arrange a formal consultation.
+</p>
+</div>
+</section>
+<!-- FAQ Content Grid -->
+<section class="max-w-[1440px] mx-auto px-margin grid grid-cols-12 gap-gutter">
+<!-- Category Sidebar -->
+<aside class="col-span-12 md:col-span-3">
+<div class="sticky top-40 space-y-unit-md">
+<div class="font-label-caps text-secondary mb-unit-md">CATEGORIES</div>
+<nav class="space-y-unit-sm">
+<a class="block py-unit-sm border-b border-outline-variant font-serif italic text-body-lg hover:text-primary transition-colors" href="#general">General Inquiries</a>
+<a class="block py-unit-sm border-b border-outline-variant font-serif italic text-body-lg hover:text-primary transition-colors" href="#consultations">Consultations</a>
+<a class="block py-unit-sm border-b border-outline-variant font-serif italic text-body-lg hover:text-primary transition-colors" href="#practice">Practice Specifics</a>
+</nav>
+<div class="mt-12 p-unit-lg bg-surface-container border border-outline-variant">
+<div class="font-label-caps text-primary mb-unit-sm">OFFICE HOURS</div>
+<p class="text-xs font-label-caps leading-relaxed">
+    MON — FRI: 08:00 - 18:00<br/>
+    SAT: BY APPOINTMENT<br/>
+    SUN: CLOSED
+</p>
+</div>
+</div>
+</aside>
+<!-- FAQ Lists -->
+<div class="col-span-12 md:col-span-9 space-y-24">
+<!-- General Inquiries -->
+<div class="scroll-mt-40" id="general">
+<div class="flex items-center gap-unit-md mb-unit-lg">
+<span class="material-symbols-outlined text-secondary">gavel</span>
+<h2 class="font-headline-lg text-primary">General Inquiries</h2>
+</div>
+<div class="space-y-unit-lg">
+<div class="group p-unit-lg bg-white border border-outline-variant hover:border-secondary transition-all">
+<h3 class="font-headline-md text-primary mb-unit-sm">Is my information confidential before I hire you?</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+    Yes. We maintain strict confidentiality for all preliminary inquiries in accordance with professional ethics. However, please be advised that a formal solicitor-client relationship only starts after an engagement letter has been duly executed by both parties.
+</p>
+</div>
+<div class="group p-unit-lg bg-white border border-outline-variant hover:border-secondary transition-all">
+<h3 class="font-headline-md text-primary mb-unit-sm">Where are your primary chambers located?</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+    Our principal office is situated in the heart of Abuja, providing proximity to the superior courts of record and regulatory administrative bodies.
+</p>
+</div>
+</div>
+</div>
+<div class="judicial-line"></div>
+<!-- Consultations -->
+<div class="scroll-mt-40" id="consultations">
+<div class="flex items-center gap-unit-md mb-unit-lg">
+<span class="material-symbols-outlined text-secondary">calendar_month</span>
+<h2 class="font-headline-lg text-primary">Consultations</h2>
+</div>
+<div class="space-y-unit-lg">
+<div class="group p-unit-lg bg-white border border-outline-variant hover:border-secondary transition-all">
+<h3 class="font-headline-md text-primary mb-unit-sm">How do I schedule a consultation?</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+    You may schedule a session by clicking the 'Contact Us' button in the navigation header or by visiting our contact page. Our secretariat will respond within 24 hours to confirm a time that aligns with the Counsel's diary.
+</p>
+</div>
+<div class="group p-unit-lg bg-white border border-outline-variant hover:border-secondary transition-all">
+<h3 class="font-headline-md text-primary mb-unit-sm">What are your consultation fees?</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+    Consultation fees vary depending on the complexity of the matter and the expertise required. We maintain a transparent billing structure which will be communicated to you prior to the confirmation of your appointment.
+</p>
+</div>
+</div>
+</div>
+<div class="judicial-line"></div>
+<!-- Practice Specifics -->
+<div class="scroll-mt-40" id="practice">
+<div class="flex items-center gap-unit-md mb-unit-lg">
+<span class="material-symbols-outlined text-secondary">account_balance</span>
+<h2 class="font-headline-lg text-primary">Practice Specifics</h2>
+</div>
+<div class="space-y-unit-lg">
+<div class="group p-unit-lg bg-white border border-outline-variant hover:border-secondary transition-all">
+<h3 class="font-headline-md text-primary mb-unit-sm">Do you take cases outside of Abuja?</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+    Yes. While our base is in the FCT, we represent clients in superior courts across Nigeria. Interstate practice is fully supported, and we have established networks to facilitate efficient legal service delivery nationwide.
+</p>
+</div>
+<div class="group p-unit-lg bg-white border border-outline-variant hover:border-secondary transition-all">
+<h3 class="font-headline-md text-primary mb-unit-sm">Which areas of law do you specialize in?</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+    Our expertise is centered on high-stakes litigation, corporate advisory, and constitutional law. We provide tailored advocacy for institutional partners and private individuals requiring rigorous legal intervention.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="max-w-[1440px] mx-auto px-margin mt-32">
+<div class="relative bg-primary p-16 overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute inset-0 opacity-10">
+<div class="w-full h-full" data-alt="close-up of traditional leather-bound law books and parchment paper in a dim academic setting with gold accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhqMdVMPHhOOQPvgvb_V-ZP0SQO8LrG8njC7ZIUfk5WMxS2nlMKjdwyB11KR7Gdqkh1dxmCF0bJqSUZQR4y_C5aPIk4TW7A38vnIXlBbhp8xNPtRKdeJOLh8N0cwd2N0vdmiC4gx4JkpruGDd_ffpufErUQsiLGliApOEcK_e60CAcfv3fs0sCK9H6v26YjsI2La9mZ6WPXZEkpw8FqontP7C8qYInAycvZztea6f0SAeCJBfUqrtTuFH0chxa8XB10m8EXgPjtah9'); background-size: cover; background-position: center;"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<h2 class="font-headline-xl text-white mb-unit-md">Still have questions?</h2>
+<p class="font-body-lg text-on-primary-container max-w-xl mb-unit-xl">
+    If your inquiry has not been addressed here, please contact our chambers directly for a confidential discussion regarding your legal requirements.
+</p>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-12 py-4 font-label-caps uppercase tracking-[0.2em] hover:bg-secondary-fixed-dim transition-colors">
+    Contact Our Chambers
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 border-t border-zinc-200 flat no-shadow">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 max-w-[1440px] mx-auto text-slate-900 font-serif text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-slate-900 font-serif mb-4 block">Marshal Abubakar</span>
+<p class="text-zinc-600 mb-6">Providing intellectual rigor and authoritative counsel across the Nigerian federation.</p>
+<div class="flex gap-4">
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">The Chambers</h4>
+<p class="text-zinc-600">Suite 402, High Court Plaza<br/>Central Business District<br/>Abuja, Nigeria</p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Legal Disclaimer</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">NBA Verification</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Hours</h4>
+<p class="text-zinc-600">Monday — Friday<br/>09:00 AM — 05:00 PM WAT</p>
+<div class="mt-6 flex items-center gap-2 text-amber-700 font-medium">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="font-label-caps text-[10px]">Open for Consultations</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-16 py-8 border-t border-zinc-200 text-center text-xs opacity-50 uppercase tracking-widest font-label-caps">
+    © 2026 Marshal Abubakar. All Rights Reserved. Authorized for Counsel in Nigeria.
+</div>
+</footer>
+
+<script>
+(function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const closeBtn = document.getElementById('sidebarClose');
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  menuToggle.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+})();
+</script>
+</body></html>

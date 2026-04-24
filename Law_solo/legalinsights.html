@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Legal Insights | Marshal Abubakar</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ===== GLOBAL RESET & VARIABLES ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --font-headline: 'Newsreader', serif;
+        --font-body: 'Inter', sans-serif;
+        
+        --color-primary: #000666;
+        --color-secondary: #775a19;
+        --color-secondary-fixed: #ffdea5;
+        --color-secondary-fixed-dim: #e9c176;
+        --color-on-primary: #ffffff;
+        --color-on-secondary: #ffffff;
+        --color-on-secondary-container: #785a1a;
+        --color-on-secondary-fixed: #261900;
+        --color-on-secondary-fixed-variant: #5d4201;
+        --color-secondary-container: #fed488;
+        --color-surface-container: #eeeeee;
+        --color-surface-container-lowest: #ffffff;
+        --color-surface-container-low: #f3f3f3;
+        --color-surface-container-high: #e8e8e8;
+        --color-surface-container-highest: #e2e2e2;
+        --color-surface: #f9f9f9;
+        --color-surface-bright: #f9f9f9;
+        --color-surface-dim: #dadada;
+        --color-background: #f9f9f9;
+        --color-on-background: #1a1c1c;
+        --color-on-surface: #1a1c1c;
+        --color-on-surface-variant: #454652;
+        --color-outline: #767683;
+        --color-outline-variant: #c6c5d4;
+        --color-primary-container: #1a237e;
+        --color-on-primary-container: #8690ee;
+        --color-primary-fixed: #e0e0ff;
+        --color-primary-fixed-dim: #bdc2ff;
+        --color-on-primary-fixed: #000767;
+        --color-on-primary-fixed-variant: #343d96;
+        --color-tertiary: #0d1d24;
+        --color-tertiary-container: #22323a;
+        --color-on-tertiary: #ffffff;
+        --color-on-tertiary-container: #899aa3;
+        --color-tertiary-fixed: #d4e5ef;
+        --color-tertiary-fixed-dim: #b8c9d3;
+        --color-on-tertiary-fixed: #0d1e25;
+        --color-on-tertiary-fixed-variant: #394951;
+        --color-error: #ba1a1a;
+        --color-on-error: #ffffff;
+        --color-error-container: #ffdad6;
+        --color-on-error-container: #93000a;
+        --color-inverse-surface: #2f3131;
+        --color-inverse-on-surface: #f1f1f1;
+        --color-inverse-primary: #bdc2ff;
+        --color-surface-tint: #4c56af;
+        --color-surface-variant: #e2e2e2;
+        --color-white: #ffffff;
+        --color-zinc-50: #fafafa;
+        --color-zinc-100: #f4f4f5;
+        --color-zinc-200: #e4e4e7;
+        --color-zinc-400: #a1a1aa;
+        --color-zinc-500: #71717a;
+        --color-zinc-600: #52525b;
+        --color-zinc-800: #27272a;
+        --color-zinc-900: #18181b;
+        --color-zinc-950: #09090b;
+        --color-amber-500: #f59e0b;
+        --color-amber-600: #d97706;
+        --color-amber-700: #b45309;
+        --color-slate-900: #0f172a;
+        
+        --spacing-unit-xs: 4px;
+        --spacing-unit-sm: 8px;
+        --spacing-unit-md: 16px;
+        --spacing-unit-lg: 24px;
+        --spacing-unit-xl: 48px;
+        --spacing-gutter: 32px;
+        --spacing-margin: 64px;
+        --container-max: 1200px;
+        --max-width-nav: 1440px;
+        
+        --border-radius-default: 0rem;
+        --border-radius-lg: 0rem;
+        --border-radius-xl: 0rem;
+        --border-radius-full: 9999px;
+        
+        --transition-speed: 200ms;
+    }
+
+    body {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: var(--color-on-background);
+        background-color: var(--color-background);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Material Symbols base */
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .font-headline-xl {
+        font-family: var(--font-headline);
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+    }
+    .font-headline-lg {
+        font-family: var(--font-headline);
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+    }
+    .font-headline-md {
+        font-family: var(--font-headline);
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    .font-body-lg {
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    .font-body-md {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+    .font-label-caps {
+        font-family: var(--font-body);
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .font-serif {
+        font-family: var(--font-headline);
+    }
+    .text-sm {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .text-xs {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .tracking-widest {
+        letter-spacing: 0.1em;
+    }
+    .tracking-tighter {
+        letter-spacing: -0.05em;
+    }
+    .tracking-tight {
+        letter-spacing: -0.025em;
+    }
+    .font-bold {
+        font-weight: 700;
+    }
+    .font-semibold {
+        font-weight: 600;
+    }
+    .font-medium {
+        font-weight: 500;
+    }
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .italic {
+        font-style: italic;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .leading-relaxed {
+        line-height: 1.625;
+    }
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* ===== COLORS ===== */
+    .text-primary { color: var(--color-primary); }
+    .text-secondary { color: var(--color-secondary); }
+    .text-secondary-fixed { color: var(--color-secondary-fixed); }
+    .text-on-primary { color: var(--color-on-primary); }
+    .text-on-secondary { color: var(--color-on-secondary); }
+    .text-on-background { color: var(--color-on-background); }
+    .text-on-surface { color: var(--color-on-surface); }
+    .text-on-surface-variant { color: var(--color-on-surface-variant); }
+    .text-white { color: var(--color-white); }
+    .text-zinc-400 { color: var(--color-zinc-400); }
+    .text-zinc-500 { color: var(--color-zinc-500); }
+    .text-zinc-600 { color: var(--color-zinc-600); }
+    .text-slate-900 { color: var(--color-slate-900); }
+    .text-amber-700 { color: var(--color-amber-700); }
+    .text-outline { color: var(--color-outline); }
+    .text-on-primary-container { color: var(--color-on-primary-container); }
+    .text-on-secondary-fixed { color: var(--color-on-secondary-fixed); }
+
+    .bg-primary { background-color: var(--color-primary); }
+    .bg-secondary { background-color: var(--color-secondary); }
+    .bg-white { background-color: var(--color-white); }
+    .bg-surface { background-color: var(--color-surface); }
+    .bg-surface-container { background-color: var(--color-surface-container); }
+    .bg-primary-container { background-color: var(--color-primary-container); }
+    .bg-secondary-fixed { background-color: var(--color-secondary-fixed); }
+    .bg-zinc-50 { background-color: var(--color-zinc-50); }
+    .bg-primary\/10 { background-color: rgba(0,6,102,0.1); }
+    
+    .border-primary { border-color: var(--color-primary); }
+    .border-secondary { border-color: var(--color-secondary); }
+    .border-outline { border-color: var(--color-outline); }
+    .border-outline\/10 { border-color: rgba(118,118,131,0.1); }
+    .border-outline\/20 { border-color: rgba(118,118,131,0.2); }
+    .border-zinc-200 { border-color: var(--color-zinc-200); }
+    .border-amber-600 { border-color: var(--color-amber-600); }
+    
+    .opacity-10 { opacity: 0.1; }
+    .opacity-20 { opacity: 0.2; }
+    .opacity-60 { opacity: 0.6; }
+    .opacity-70 { opacity: 0.7; }
+    .opacity-80 { opacity: 0.8; }
+    .opacity-90 { opacity: 0.9; }
+    .opacity-50 { opacity: 0.5; }
+    .opacity-100 { opacity: 1; }
+
+    /* ===== LAYOUT & SPACING ===== */
+    .container-max {
+        max-width: var(--container-max);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .max-w-2xl { max-width: 42rem; }
+    .max-w-3xl { max-width: 48rem; }
+    .max-w-\[1440px\] { max-width: 1440px; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    
+    .px-16 { padding-left: 4rem; padding-right: 4rem; }
+    .px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+    .px-0 { padding-left: 0; padding-right: 0; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+    .p-8 { padding: 2rem; }
+    .p-10 { padding: 2.5rem; }
+    .px-margin { padding-left: var(--spacing-margin); padding-right: var(--spacing-margin); }
+    .pl-8 { padding-left: 2rem; }
+    
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-16 { margin-bottom: 4rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mt-20 { margin-top: 5rem; }
+    .gap-2 { gap: 0.5rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-12 { gap: 3rem; }
+    .gap-gutter { gap: var(--spacing-gutter); }
+    .space-y-2 > * + * { margin-top: 0.5rem; }
+    .space-y-3 > * + * { margin-top: 0.75rem; }
+    .space-y-4 > * + * { margin-top: 1rem; }
+    .space-x-8 > * + * { margin-left: 2rem; }
+
+    /* ===== FLEX & GRID ===== */
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    .hidden { display: none; }
+    .block { display: block; }
+    .inline-block { display: inline-block; }
+    .flex-wrap { flex-wrap: wrap; }
+    .flex-col { flex-direction: column; }
+    .flex-1 { flex: 1 1 0%; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .fixed { position: fixed; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .z-10 { z-index: 10; }
+    .z-50 { z-index: 50; }
+    .top-0 { top: 0; }
+    .top-3 { top: 0.75rem; }
+    .right-0 { right: 0; }
+    .overflow-hidden { overflow: hidden; }
+    .w-full { width: 100%; }
+    .w-12 { width: 3rem; }
+    .h-full { height: 100%; }
+    .h-12 { height: 3rem; }
+    .aspect-\[16\/9\] { aspect-ratio: 16/9; }
+    .aspect-video { aspect-ratio: 16/9; }
+    .object-cover { object-fit: cover; }
+    .rounded-full { border-radius: 9999px; }
+    .rounded-none { border-radius: 0; }
+    .border { border-width: 1px; }
+    .border-t { border-top-width: 1px; }
+    .border-b { border-bottom-width: 1px; }
+    .border-l-4 { border-left-width: 4px; }
+    .border-none { border: none; }
+    .transition-all { transition: all var(--transition-speed) ease; }
+    .transition-colors { transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease; }
+    .transition-transform { transition: transform var(--transition-speed) ease; }
+    .transition-shadow { transition: box-shadow var(--transition-speed) ease; }
+    .duration-200 { transition-duration: 200ms; }
+    .duration-300 { transition-duration: 300ms; }
+    .duration-500 { transition-duration: 500ms; }
+    .hover\:bg-opacity-90:hover { opacity: 0.9; }
+    .hover\:bg-primary:hover { background-color: var(--color-primary); }
+    .hover\:bg-transparent:hover { background-color: transparent; }
+    .hover\:text-primary:hover { color: var(--color-primary); }
+    .hover\:text-secondary:hover { color: var(--color-secondary); }
+    .hover\:text-on-primary:hover { color: var(--color-on-primary); }
+    .hover\:text-amber-700:hover { color: var(--color-amber-700); }
+    .hover\:text-slate-900:hover { color: var(--color-slate-900); }
+    .hover\:border-primary:hover { border-color: var(--color-primary); }
+    .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+    .hover\:underline:hover { text-decoration: underline; }
+    .underline { text-decoration: underline; }
+    .underline-offset-4 { text-underline-offset: 4px; }
+    .cursor-pointer { cursor: pointer; }
+    .pb-1 { padding-bottom: 0.25rem; }
+    .no-underline { text-decoration: none; }
+    .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .active\:opacity-70:active { opacity: 0.7; }
+
+    /* Group hover */
+    .group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+    .group:hover .group-hover\:text-primary { color: var(--color-primary); }
+    .group:hover .group-hover\:gap-4 { gap: 1rem; }
+
+    /* Grid columns */
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-1 { grid-column: span 1 / span 1; }
+
+    /* Focus */
+    .focus\:ring-0:focus { outline: none; box-shadow: none; }
+    .focus\:border-secondary:focus { border-color: var(--color-secondary); }
+
+    /* Placeholder */
+    .placeholder\:opacity-50::placeholder { opacity: 0.5; }
+
+    /* ===== SIDEBAR STYLES ===== */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 280px;
+        height: 100%;
+        background: white;
+        z-index: 110;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+        padding: 2rem 1.5rem;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar.active {
+        right: 0;
+    }
+    .sidebar-close {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-on-surface);
+        margin-bottom: 2rem;
+        line-height: 1;
+    }
+    .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-family: var(--font-headline);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+    }
+    .sidebar-links a {
+        color: var(--color-on-surface);
+        text-decoration: none;
+        padding-bottom: 0.25rem;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+    }
+    .sidebar-links a:hover {
+        color: var(--color-amber-700);
+        border-bottom-color: var(--color-amber-600);
+    }
+    
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-slate-900);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+        .hidden.md\:flex {
+            display: none !important;
+        }
+        .menu-toggle {
+            display: block;
+        }
+        .px-16 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .px-margin {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .grid-cols-1.md\:grid-cols-2, .grid-cols-1.md\:grid-cols-12, .grid-cols-1.md\:grid-cols-4 {
+            grid-template-columns: 1fr;
+        }
+        .md\:col-span-1, .md\:col-span-4, .md\:col-span-8 {
+            grid-column: span 1 / span 1;
+        }
+        .flex-col.md\:flex-row { flex-direction: column; }
+        .font-headline-xl {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        .font-headline-lg {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .p-10 { padding: 1.5rem; }
+        .mb-16 { margin-bottom: 2rem; }
+    }
+    @media (min-width: 769px) {
+        .md\:flex { display: flex; }
+        .md\:inline-block { display: inline-block; }
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .md\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+        .md\:col-span-1 { grid-column: span 1 / span 1; }
+        .md\:col-span-4 { grid-column: span 4 / span 4; }
+        .md\:col-span-8 { grid-column: span 8 / span 8; }
+    }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-white border-b border-zinc-200 docked full-width top-0 z-50">
+<nav class="flex justify-between items-center w-full px-16 py-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-size: 32px; color: #000666;">balance</span>
+<a class="text-2xl font-bold tracking-tighter text-slate-900 font-serif" href="#">
+    Marshal Abubakar
+</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="index.html">Home</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="about.html">About</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="practiceareas.html">Practice Areas</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="casehighlights.html">Case Highlights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-slate-900 border-b border-amber-600 pb-1 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="legalinsights.html">Insights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer opacity-100 active:opacity-70" href="FAQ.html">FAQ</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label-caps text-xs tracking-widest uppercase hover:bg-opacity-90 transition-all rounded-none" onclick="window.location.href='contact.html'">
+    Contact Us
+</button>
+<button class="menu-toggle material-symbols-outlined" style="font-size: 32px;" id="menuToggle">menu</button>
+</div>
+</nav>
+</header>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+<button class="sidebar-close material-symbols-outlined" id="sidebarClose">close</button>
+<div class="sidebar-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="practiceareas.html">Practice Areas</a>
+<a href="casehighlights.html">Case Highlights</a>
+<a href="legalinsights.html" style="color: #000666; font-weight: 700;">Insights</a>
+<a href="FAQ.html">FAQ</a>
+<a href="contact.html">Contact Us</a>
+</div>
+</div>
+
+<main class="max-w-[1440px] mx-auto px-16 py-20">
+<!-- Header Section -->
+<header class="mb-16 border-l-4 border-secondary pl-8">
+<span class="font-label-caps text-secondary uppercase mb-2 block">Educational Resource</span>
+<h1 class="font-headline-xl text-on-background mb-4">Legal Insights</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">
+    Intellectually rigorous analysis of Nigerian law, designed to provide clarity and precision for institutional partners and private individuals.
+</p>
+</header>
+<!-- Featured Section (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
+<!-- Article 1: High Visibility -->
+<article class="md:col-span-8 group cursor-pointer border border-outline/20 bg-white">
+<div class="relative overflow-hidden aspect-[16/9]">
+<img class="object-cover w-full h-full transition-transform duration-500" style="transform: scale(1);" data-alt="Aerial architectural view of Abuja city skyline with modern government buildings and clear sky at mid-day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrIFeQcAdAGcgxkHKVcSq5dWO85bjAx7dQefgckDQVtoEppl6p23vWzdl-XN-_ciHtxZfjY_k0YeGVC1eZ7pDpR6ryyfLuLCqDQdcJjDAu9Qlc991AnLOpLUIU-zX51jOJSP294fhNOdHFRsqr5zP0164I4_OH9_h1jxfB_yIY65tcD_xcKAV3OgH8m4Y0hyS6JIWdW8rTX-DaRG4Pj9a4tV9RNsQJnhju6x0FhjVtTBNcfo3Hcyi5wvbvQffm0u25yZJDP-D_EFEH"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors" style="transition: background-color 200ms ease;"></div>
+</div>
+<div class="p-10">
+<div class="flex items-center gap-4 mb-4">
+<span class="font-label-caps text-secondary border border-secondary px-2 py-0.5">Property Law</span>
+<time class="font-label-caps text-outline">OCTOBER 24, 2023</time>
+</div>
+<h2 class="font-headline-lg mb-4 text-on-surface group-hover:text-primary transition-colors">5 Critical Steps Before Buying Land in Abuja</h2>
+<p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
+    Navigating the complexities of the Federal Capital Territory's land administration requires rigorous due diligence. From verifying Certificates of Occupancy at AGIS to understanding zoning regulations, ensure your investment is anchored on solid legal ground.
+</p>
+<button class="flex items-center gap-2 text-primary font-label-caps uppercase border-b border-primary pb-1 group-hover:gap-4 transition-all">
+    Read Full Insight <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Sidebar Context -->
+<aside class="md:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container p-8 flex-1 border border-outline/10">
+<h3 class="font-headline-md mb-6">Search Archives</h3>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-outline py-3 px-0 font-body-md" placeholder="Keywords..." type="text" style="outline: none;"/>
+<span class="material-symbols-outlined absolute right-0 top-3 text-outline">search</span>
+</div>
+<div class="mt-8 space-y-4">
+<h4 class="font-label-caps text-on-surface-variant">CATEGORIES</h4>
+<ul class="space-y-2">
+<li class="flex justify-between items-center py-2 border-b border-outline/10 hover:text-secondary transition-colors cursor-pointer">
+<span class="font-body-md">Corporate Litigation</span>
+<span class="text-xs font-label-caps text-outline">12</span>
+</li>
+<li class="flex justify-between items-center py-2 border-b border-outline/10 hover:text-secondary transition-colors cursor-pointer">
+<span class="font-body-md">Constitutional Rights</span>
+<span class="text-xs font-label-caps text-outline">08</span>
+</li>
+<li class="flex justify-between items-center py-2 border-b border-outline/10 hover:text-secondary transition-colors cursor-pointer">
+<span class="font-body-md">Energy &amp; Power</span>
+<span class="text-xs font-label-caps text-outline">05</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-primary p-8 text-on-primary">
+<h3 class="font-headline-md mb-4 text-secondary-fixed">Newsletter</h3>
+<p class="font-body-md mb-6 opacity-80">Monthly briefing on significant legal precedents and regulatory shifts in West Africa.</p>
+<input class="w-full bg-primary-container text-on-primary-container border-none py-3 px-4 mb-4" placeholder="Professional Email" type="email" style="outline: none;"/>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed py-3 font-label-caps uppercase tracking-widest font-bold">Subscribe</button>
+</div>
+</aside>
+</div>
+<!-- Secondary Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Article 2 -->
+<article class="bg-white border border-outline/20 group hover:shadow-xl transition-shadow duration-300">
+<div class="aspect-video overflow-hidden">
+<img class="object-cover w-full h-full transition-transform duration-500" style="transform: scale(1);" data-alt="Close-up of a wooden judge gavel resting on a leather-bound legal book in a dimly lit, traditional law library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApGioP3Y7_JM1j6Fz7M1XDeiyrvtuNX4jA5fMtjwi0im0CDB5RVaAPXhLL8etLxvJbqaoVy5K_NIrCsiHoiJC4x5DMOXlUaN_rJ-_ulLOQi8wgO9t_Rl-5D_kh1bzm9P_W7CbPEQiE0Qqgz2Wd6KTP0mEKjCjVOhfVE1synBurYkdWM1nbW_aDMGV6ph8MYnOC9jpvZsEOcDV9cMkv1rg3d29ZIEk8wi7DhGFjiSZOgDXWL1UTLGuW3EWAtOXSUyW4-dcLLOk6zMCb"/>
+</div>
+<div class="p-10">
+<time class="font-label-caps text-outline mb-3 block">SEPTEMBER 12, 2023</time>
+<h3 class="font-headline-md mb-4 group-hover:text-primary transition-colors">What to Do If You Are Arrested in Nigeria</h3>
+<p class="font-body-md text-on-surface-variant mb-8 line-clamp-3">
+    Understanding your constitutional rights under the Administration of Criminal Justice Act (ACJA) is paramount. This guide outlines the immediate procedural steps and rights of the accused to ensure due process is observed.
+</p>
+<div class="flex justify-between items-center">
+<button class="font-label-caps text-primary border border-primary px-6 py-2 hover:bg-primary hover:text-on-primary transition-colors">Read More</button>
+<div class="flex gap-4 text-outline">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">bookmark</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="bg-white border border-outline/20 group hover:shadow-xl transition-shadow duration-300">
+<div class="aspect-video overflow-hidden">
+<img class="object-cover w-full h-full transition-transform duration-500" style="transform: scale(1);" data-alt="A clean, minimalist desk with a fountain pen resting on a signed corporate contract, soft overhead light creating deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_TjOBFBLEd4S9y5iZuJUriFHpsDOww_lPQIAA5oLG2sCNSMFfEiMpBYI6CVRJMoNArD1-OtOv8dL-BWzNOn-2qHziXPP0X3ei0M7tEReiCEESa8qJh5Ru0cVkYF3oUqrE6JiwI_KffQza4PJev090w_zvM9klXbFuULUcEp2ZR5f0NQLZ3moQIdUnPtEQcd74mmSLVluLef5k-jL2qFJrDcRVIofh6diGM0YlfD0blxwJwlu5wqMXEcBmacWlZURAl_eJyYw3IM5q"/>
+</div>
+<div class="p-10">
+<time class="font-label-caps text-outline mb-3 block">AUGUST 29, 2023</time>
+<h3 class="font-headline-md mb-4 group-hover:text-primary transition-colors">Sole Proprietorship vs Private Limited Company</h3>
+<p class="font-body-md text-on-surface-variant mb-8 line-clamp-3">
+    Choosing the right business structure in Nigeria affects taxation, liability, and capital scaling. We compare the CAC registration requirements and long-term legal implications of each model for emerging entrepreneurs.
+</p>
+<div class="flex justify-between items-center">
+<button class="font-label-caps text-primary border border-primary px-6 py-2 hover:bg-primary hover:text-on-primary transition-colors">Read More</button>
+<div class="flex gap-4 text-outline">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">bookmark</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-outline/20 text-outline hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center border border-primary bg-primary text-on-primary font-label-caps">1</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline/20 text-on-surface font-label-caps hover:border-primary transition-colors">2</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline/20 text-on-surface font-label-caps hover:border-primary transition-colors">3</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline/20 text-outline hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 border-t border-zinc-200 flat no-shadow">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 max-w-[1440px] mx-auto text-slate-900 font-serif text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-slate-900 font-serif mb-4 block">Marshal Abubakar</span>
+<p class="text-zinc-600 mb-6">Providing intellectual rigor and authoritative counsel across the Nigerian federation.</p>
+<div class="flex gap-4">
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">The Chambers</h4>
+<p class="text-zinc-600">Suite 402, High Court Plaza<br/>Central Business District<br/>Abuja, Nigeria</p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Legal Disclaimer</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">NBA Verification</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Hours</h4>
+<p class="text-zinc-600">Monday — Friday<br/>09:00 AM — 05:00 PM WAT</p>
+<div class="mt-6 flex items-center gap-2 text-amber-700 font-medium">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="font-label-caps text-[10px]">Open for Consultations</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-16 py-8 border-t border-zinc-200 text-center text-xs opacity-50 uppercase tracking-widest font-label-caps">
+    © 2026 Marshal Abubakar. All Rights Reserved. Authorized for Counsel in Nigeria.
+</div>
+</footer>
+
+<script>
+(function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const closeBtn = document.getElementById('sidebarClose');
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  menuToggle.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+})();
+</script>
+</body></html>

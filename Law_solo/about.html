@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Marshal Abubakar</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ===== GLOBAL RESET & VARIABLES ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --font-headline: 'Newsreader', serif;
+        --font-body: 'Inter', sans-serif;
+        
+        --color-primary: #000666;
+        --color-secondary: #775a19;
+        --color-secondary-fixed: #ffdea5;
+        --color-on-primary: #ffffff;
+        --color-on-secondary: #ffffff;
+        --color-on-secondary-container: #785a1a;
+        --color-secondary-container: #fed488;
+        --color-surface-container: #eeeeee;
+        --color-surface-container-lowest: #ffffff;
+        --color-surface-container-high: #e8e8e8;
+        --color-surface-container-highest: #e2e2e2;
+        --color-surface: #f9f9f9;
+        --color-surface-bright: #f9f9f9;
+        --color-surface-dim: #dadada;
+        --color-background: #f9f9f9;
+        --color-on-background: #1a1c1c;
+        --color-on-surface: #1a1c1c;
+        --color-on-surface-variant: #454652;
+        --color-outline: #767683;
+        --color-outline-variant: #c6c5d4;
+        --color-primary-container: #1a237e;
+        --color-on-primary-container: #8690ee;
+        --color-primary-fixed: #e0e0ff;
+        --color-primary-fixed-dim: #bdc2ff;
+        --color-on-primary-fixed: #000767;
+        --color-on-primary-fixed-variant: #343d96;
+        --color-secondary-fixed-dim: #e9c176;
+        --color-on-secondary-fixed: #261900;
+        --color-on-secondary-fixed-variant: #5d4201;
+        --color-tertiary: #0d1d24;
+        --color-tertiary-container: #22323a;
+        --color-on-tertiary: #ffffff;
+        --color-on-tertiary-container: #899aa3;
+        --color-tertiary-fixed: #d4e5ef;
+        --color-tertiary-fixed-dim: #b8c9d3;
+        --color-on-tertiary-fixed: #0d1e25;
+        --color-on-tertiary-fixed-variant: #394951;
+        --color-error: #ba1a1a;
+        --color-on-error: #ffffff;
+        --color-error-container: #ffdad6;
+        --color-on-error-container: #93000a;
+        --color-inverse-surface: #2f3131;
+        --color-inverse-on-surface: #f1f1f1;
+        --color-inverse-primary: #bdc2ff;
+        --color-surface-tint: #4c56af;
+        --color-surface-variant: #e2e2e2;
+        --color-white: #ffffff;
+        --color-zinc-50: #fafafa;
+        --color-zinc-100: #f4f4f5;
+        --color-zinc-200: #e4e4e7;
+        --color-zinc-400: #a1a1aa;
+        --color-zinc-500: #71717a;
+        --color-zinc-600: #52525b;
+        --color-zinc-800: #27272a;
+        --color-zinc-900: #18181b;
+        --color-zinc-950: #09090b;
+        --color-amber-500: #f59e0b;
+        --color-amber-600: #d97706;
+        --color-amber-700: #b45309;
+        --color-slate-900: #0f172a;
+        
+        --spacing-unit-xs: 4px;
+        --spacing-unit-sm: 8px;
+        --spacing-unit-md: 16px;
+        --spacing-unit-lg: 24px;
+        --spacing-unit-xl: 48px;
+        --spacing-gutter: 32px;
+        --spacing-margin: 64px;
+        --container-max: 1200px;
+        --max-width-nav: 1440px;
+        
+        --border-radius-default: 0.25rem;
+        --border-radius-lg: 0.5rem;
+        --border-radius-xl: 0.75rem;
+        --border-radius-full: 9999px;
+        
+        --transition-speed: 200ms;
+    }
+
+    body {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: var(--color-on-background);
+        background-color: var(--color-background);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+
+    /* Material Symbols base */
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .font-headline-xl {
+        font-family: var(--font-headline);
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+    }
+    .font-headline-lg {
+        font-family: var(--font-headline);
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+    }
+    .font-headline-md {
+        font-family: var(--font-headline);
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    .font-body-lg {
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    .font-body-md {
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+    .font-label-caps {
+        font-family: var(--font-body);
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .font-serif {
+        font-family: var(--font-headline);
+    }
+    .text-sm {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .text-xs {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .text-\[400px\] {
+        font-size: 400px;
+    }
+    .tracking-widest {
+        letter-spacing: 0.1em;
+    }
+    .tracking-tighter {
+        letter-spacing: -0.05em;
+    }
+    .tracking-tight {
+        letter-spacing: -0.025em;
+    }
+    .font-bold {
+        font-weight: 700;
+    }
+    .font-semibold {
+        font-weight: 600;
+    }
+    .font-medium {
+        font-weight: 500;
+    }
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .italic {
+        font-style: italic;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .leading-relaxed {
+        line-height: 1.625;
+    }
+    .leading-tight {
+        line-height: 1.25;
+    }
+    .leading-none {
+        line-height: 1;
+    }
+
+    /* ===== COLORS ===== */
+    .text-primary { color: var(--color-primary); }
+    .text-secondary { color: var(--color-secondary); }
+    .text-secondary-fixed { color: var(--color-secondary-fixed); }
+    .text-on-primary { color: var(--color-on-primary); }
+    .text-on-secondary { color: var(--color-on-secondary); }
+    .text-on-background { color: var(--color-on-background); }
+    .text-on-surface { color: var(--color-on-surface); }
+    .text-on-surface-variant { color: var(--color-on-surface-variant); }
+    .text-white { color: var(--color-white); }
+    .text-zinc-500 { color: var(--color-zinc-500); }
+    .text-zinc-600 { color: var(--color-zinc-600); }
+    .text-slate-900 { color: var(--color-slate-900); }
+    .text-amber-700 { color: var(--color-amber-700); }
+    .text-on-primary-container { color: var(--color-on-primary-container); }
+
+    .bg-primary { background-color: var(--color-primary); }
+    .bg-secondary { background-color: var(--color-secondary); }
+    .bg-white { background-color: var(--color-white); }
+    .bg-surface { background-color: var(--color-surface); }
+    .bg-surface-container { background-color: var(--color-surface-container); }
+    .bg-primary-container { background-color: var(--color-primary-container); }
+    .bg-zinc-50 { background-color: var(--color-zinc-50); }
+    .bg-white\/5 { background-color: rgba(255,255,255,0.05); }
+    
+    .border-primary { border-color: var(--color-primary); }
+    .border-secondary { border-color: var(--color-secondary); }
+    .border-outline-variant { border-color: var(--color-outline-variant); }
+    .border-white\/10 { border-color: rgba(255,255,255,0.1); }
+    .border-white\/30 { border-color: rgba(255,255,255,0.3); }
+    .border-zinc-100 { border-color: var(--color-zinc-100); }
+    .border-zinc-200 { border-color: var(--color-zinc-200); }
+    .border-amber-600 { border-color: var(--color-amber-600); }
+    .border-on-primary-container\/30 { border-color: rgba(134,144,238,0.3); }
+    
+    .opacity-10 { opacity: 0.1; }
+    .opacity-20 { opacity: 0.2; }
+    .opacity-60 { opacity: 0.6; }
+    .opacity-70 { opacity: 0.7; }
+    .opacity-80 { opacity: 0.8; }
+    .opacity-90 { opacity: 0.9; }
+    .opacity-50 { opacity: 0.5; }
+    .opacity-100 { opacity: 1; }
+
+    /* ===== LAYOUT & SPACING ===== */
+    .container-max {
+        max-width: var(--container-max);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .max-w-3xl { max-width: 48rem; }
+    .max-w-xl { max-width: 36rem; }
+    .max-w-lg { max-width: 32rem; }
+    .max-w-sm { max-width: 24rem; }
+    .max-w-\[1440px\] { max-width: 1440px; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    
+    .px-16 { padding-left: 4rem; padding-right: 4rem; }
+    .px-12 { padding-left: 3rem; padding-right: 3rem; }
+    .px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+    .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+    .px-margin { padding-left: var(--spacing-margin); padding-right: var(--spacing-margin); }
+    .py-unit-xl { padding-top: var(--spacing-unit-xl); padding-bottom: var(--spacing-unit-xl); }
+    .p-16 { padding: 4rem; }
+    .p-4 { padding: 1rem; }
+    .p-unit-lg { padding: var(--spacing-unit-lg); }
+    .p-unit-xl { padding: var(--spacing-unit-xl); }
+    .px-unit-lg { padding-left: var(--spacing-unit-lg); padding-right: var(--spacing-unit-lg); }
+    .py-unit-md { padding-top: var(--spacing-unit-md); padding-bottom: var(--spacing-unit-md); }
+    .pl-unit-xl { padding-left: var(--spacing-unit-xl); }
+    .pl-unit-md { padding-left: var(--spacing-unit-md); }
+    
+    .mb-unit-sm { margin-bottom: var(--spacing-unit-sm); }
+    .mb-unit-md { margin-bottom: var(--spacing-unit-md); }
+    .mb-unit-lg { margin-bottom: var(--spacing-unit-lg); }
+    .mb-unit-xl { margin-bottom: var(--spacing-unit-xl); }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-16 { margin-bottom: 4rem; }
+    .mb-32 { margin-bottom: 8rem; }
+    .mt-unit-sm { margin-top: var(--spacing-unit-sm); }
+    .mt-unit-xl { margin-top: var(--spacing-unit-xl); }
+    .mt-6 { margin-top: 1.5rem; }
+    .-mr-32 { margin-right: -8rem; }
+    .-mt-32 { margin-top: -8rem; }
+    .gap-unit-md { gap: var(--spacing-unit-md); }
+    .gap-unit-xl { gap: var(--spacing-unit-xl); }
+    .gap-gutter { gap: var(--spacing-gutter); }
+    .gap-2 { gap: 0.5rem; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-10 { gap: 2.5rem; }
+    .gap-12 { gap: 3rem; }
+    .space-y-4 > * + * { margin-top: 1rem; }
+    .space-y-unit-lg > * + * { margin-top: var(--spacing-unit-lg); }
+    .space-y-3 > * + * { margin-top: 0.75rem; }
+
+    /* ===== FLEX & GRID ===== */
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    .hidden { display: none; }
+    .block { display: block; }
+    .inline-block { display: inline-block; }
+    .flex-wrap { flex-wrap: wrap; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .fixed { position: fixed; }
+    .sticky { position: sticky; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .-inset-4 { top: -1rem; right: -1rem; bottom: -1rem; left: -1rem; }
+    .z-10 { z-index: 10; }
+    .z-50 { z-index: 50; }
+    .top-0 { top: 0; }
+    .top-24 { top: 6rem; }
+    .right-0 { right: 0; }
+    .overflow-hidden { overflow: hidden; }
+    .overflow-x-hidden { overflow-x: hidden; }
+    .w-full { width: 100%; }
+    .w-1\/3 { width: 33.333333%; }
+    .h-full { height: 100%; }
+    .h-64 { height: 16rem; }
+    .h-\[600px\] { height: 600px; }
+    .h-1 { height: 0.25rem; }
+    .h-auto { height: auto; }
+    .w-12 { width: 3rem; }
+    .h-12 { height: 3rem; }
+    .w-24 { width: 6rem; }
+    .w-64 { width: 16rem; }
+    .object-cover { object-fit: cover; }
+    .rounded-full { border-radius: 9999px; }
+    .rounded-none { border-radius: 0; }
+    .border { border-width: 1px; }
+    .border-t { border-top-width: 1px; }
+    .border-b { border-bottom-width: 1px; }
+    .border-l-4 { border-left-width: 4px; }
+    .border-r { border-right-width: 1px; }
+    .last\:border-none:last-child { border: none; }
+    .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+    .grayscale { filter: grayscale(100%); }
+    .brightness-0 { filter: brightness(0); }
+    .brightness-125 { filter: brightness(1.25); }
+    .contrast-125 { filter: contrast(1.25); }
+    .mix-blend-screen { mix-blend-mode: screen; }
+    .backdrop-blur-sm { backdrop-filter: blur(4px); }
+    .transition-all { transition: all var(--transition-speed) ease; }
+    .transition-colors { transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease; }
+    .duration-200 { transition-duration: 200ms; }
+    .duration-300 { transition-duration: 300ms; }
+    .hover\:bg-opacity-90:hover { opacity: 0.9; }
+    .hover\:bg-white:hover { background-color: white; }
+    .hover\:bg-primary:hover { background-color: var(--color-primary); }
+    .hover\:text-primary:hover { color: var(--color-primary); }
+    .hover\:text-white:hover { color: white; }
+    .hover\:text-amber-700:hover { color: var(--color-amber-700); }
+    .hover\:text-slate-900:hover { color: var(--color-slate-900); }
+    .hover\:underline:hover { text-decoration: underline; }
+    .hover\:border-secondary:hover { border-color: var(--color-secondary); }
+    .underline { text-decoration: underline; }
+    .underline-offset-4 { text-underline-offset: 4px; }
+    .cursor-pointer { cursor: pointer; }
+    .pb-1 { padding-bottom: 0.25rem; }
+    .pt-unit-xl { padding-top: var(--spacing-unit-xl); }
+    .no-underline { text-decoration: none; }
+    .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    /* Group hover */
+    .group:hover .group-hover\:bg-secondary { background-color: var(--color-secondary); }
+    .group:hover .group-hover\:text-white { color: white; }
+
+    /* Decorative */
+    .translate-x-4 { transform: translateX(1rem); }
+    .translate-y-4 { transform: translateY(1rem); }
+    
+    .min-h-\[870px\] { min-height: 870px; }
+    .text-\[10px\] { font-size: 10px; }
+    .tracking-\[0\.2em\] { letter-spacing: 0.2em; }
+
+    /* Grid columns */
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .col-span-1 { grid-column: span 1 / span 1; }
+    .col-span-12 { grid-column: span 12 / span 12; }
+
+    /* ===== SIDEBAR STYLES ===== */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 280px;
+        height: 100%;
+        background: white;
+        z-index: 110;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+        padding: 2rem 1.5rem;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar.active {
+        right: 0;
+    }
+    .sidebar-close {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-on-surface);
+        margin-bottom: 2rem;
+        line-height: 1;
+    }
+    .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-family: var(--font-headline);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+    }
+    .sidebar-links a {
+        color: var(--color-on-surface);
+        text-decoration: none;
+        padding-bottom: 0.25rem;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+    }
+    .sidebar-links a:hover {
+        color: var(--color-amber-700);
+        border-bottom-color: var(--color-amber-600);
+    }
+    
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-slate-900);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+        .hidden.md\:flex {
+            display: none !important;
+        }
+        .menu-toggle {
+            display: block;
+        }
+        .px-16 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .px-margin {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .p-16 {
+            padding: 2rem;
+        }
+        .grid-cols-1.md\:grid-cols-2, .grid-cols-1.md\:grid-cols-3, .grid-cols-1.md\:grid-cols-4 {
+            grid-template-columns: 1fr;
+        }
+        .md\:col-span-2, .md\:col-span-4, .md\:col-span-8 {
+            grid-column: span 1 / span 1;
+        }
+        .md\:w-1\/2 {
+            width: 100%;
+        }
+        .flex-col.md\:flex-row {
+            flex-direction: column;
+        }
+        .font-headline-xl {
+            font-size: 36px;
+            line-height: 44px;
+        }
+        .font-headline-lg {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .border-r {
+            border-right: none;
+        }
+        .h-\[600px\] {
+            height: 400px;
+        }
+        .mb-32 {
+            margin-bottom: 4rem;
+        }
+        .w-1\/3 {
+            width: 100%;
+        }
+        .text-\[400px\] {
+            font-size: 200px;
+        }
+    }
+    @media (min-width: 769px) {
+        .md\:flex { display: flex; }
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .md\:col-span-2 { grid-column: span 2 / span 2; }
+        .md\:col-span-4 { grid-column: span 4 / span 4; }
+        .md\:col-span-8 { grid-column: span 8 / span 8; }
+        .md\:w-1\/2 { width: 50%; }
+        .md\:flex-row { flex-direction: row; }
+        .md\:col-span-1 { grid-column: span 1 / span 1; }
+    }
+</style>
+</head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-white docked full-width top-0 z-50 border-b border-zinc-200 flat no-shadow">
+<nav class="flex justify-between items-center w-full px-16 py-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-size: 32px; color: #000666;">balance</span>
+<a class="text-2xl font-bold tracking-tighter text-slate-900 font-serif" href="#">
+    Marshal Abubakar
+</a>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="index.html">Home</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-slate-900 border-b border-amber-600 pb-1 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="about.html">About</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="practiceareas.html">Practice Areas</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="casehighlights.html">Case Highlights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="legalinsights.html">Insights</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label-caps text-xs tracking-widest uppercase hover:bg-opacity-90 transition-all rounded-none" onclick="window.location.href='contact.html'">
+    Contact Us
+</button>
+<button class="menu-toggle material-symbols-outlined" style="font-size: 32px;" id="menuToggle">menu</button>
+</div>
+</nav>
+</header>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+<button class="sidebar-close material-symbols-outlined" id="sidebarClose">close</button>
+<div class="sidebar-links">
+<a href="index.html">Home</a>
+<a href="about.html" style="color: #000666; font-weight: 700;">About</a>
+<a href="practiceareas.html">Practice Areas</a>
+<a href="casehighlights.html">Case Highlights</a>
+<a href="legalinsights.html">Insights</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+
+<main class="max-w-[1440px] mx-auto px-16 py-20">
+<!-- Hero: Quote & Headshot Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center mb-32">
+<div class="relative group">
+<div class="absolute -inset-4 border border-secondary opacity-20"></div>
+<img alt="Marshal Abubakar" class="w-full h-[600px] object-cover grayscale contrast-125" data-alt="Dignified professional portrait of a senior lawyer in a charcoal suit, cinematic soft side lighting against a dark library background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhlKgTYpL0GiO6-jlPsYfImEDLAnqA1auxAEGOxeYtJ-A3LhsSkI85fVdH-DAwYYnAys5IllQOeL5gWqx5D0PlkJUga333t0vCQyDu-s7U8o79lfpN1FVcyQmNZieF--GVFC-S7dylDSbDHLEbqrxe51Tr0cOk-L2xav0PSKinn1mRWkYQDNRxXqVJMKf5KTvYDCy6bqefbFMaH2090Yk8e4lbeJNxss4U1R7Pqf5TYk141dVjcK2pBxotEVnLGjdcjQjKUZGA6_Aa"/>
+</div>
+<div class="pl-unit-xl">
+<span class="font-label-caps text-secondary mb-unit-md block">FOUNDING COUNSEL</span>
+<blockquote class="font-headline-xl text-primary mb-unit-lg italic leading-tight">
+    "I believe every client deserves not just legal expertise, but a lawyer who genuinely listens..."
+</blockquote>
+<p class="font-body-lg text-on-surface-variant max-w-lg">
+    In the temple of justice, the strength of an argument is only as powerful as the integrity of the voice behind it. My commitment is to provide that voice—articulate, informed, and relentless.
+</p>
+</div>
+</section>
+<!-- Bio: Detailed Narrative -->
+<section class="mb-32 grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4">
+<h2 class="font-headline-lg text-primary sticky top-24">The Pursuit of Intellectual Rigour</h2>
+</div>
+<div class="col-span-12 md:col-span-8 space-y-unit-lg">
+<p class="font-body-lg text-on-surface leading-relaxed">
+    Marshal Abubakar's journey through the legal landscape is marked by a deep-seated reverence for the rule of law. Educated at prestigious institutions and called to the Nigerian Bar with distinction, he has spent over two decades navigating the complexities of civil and criminal litigation. His early career was shaped by a mentorship under several of the nation's most formidable legal minds, where he developed a reputation for meticulous research and an uncompromising work ethic.
+</p>
+<p class="font-body-lg text-on-surface leading-relaxed">
+    Specializing in high-stakes corporate litigation and constitutional matters, Marshal has successfully represented a broad spectrum of clients, from multinational corporations to private individuals seeking redress against institutional overreach. His approach is defined by a surgical precision in analyzing case law and a creative strategic vision that often finds resolutions where others see only deadlock.
+</p>
+<p class="font-body-lg text-on-surface leading-relaxed">
+    Beyond the courtroom, Abubakar is a staunch advocate for legal reform and institutional transparency. He frequently contributes to academic journals and serves as a guest lecturer on civil procedure. His philosophy is rooted in the belief that the law is not merely a set of rules, but a living instrument for social stability and economic progress. Every case is treated with the gravity it deserves, ensuring that justice is not just sought, but secured.
+</p>
+<p class="font-body-lg text-on-surface leading-relaxed">
+    Today, as the lead counsel of his eponymous firm, he continues to set benchmarks for legal excellence in Nigeria. His practice is built on the twin pillars of absolute confidentiality and unwavering loyalty to the client's cause. Whether in the chambers of the Supreme Court or a private arbitration room, Marshal Abubakar remains a formidable presence, dedicated to the highest traditions of the legal profession.
+</p>
+</div>
+</section>
+<!-- Credentials & Affiliations -->
+<section class="mb-32 bg-white p-16 border border-zinc-200">
+<div class="text-center mb-16">
+<span class="font-label-caps text-secondary">PROFESSIONAL RECOGNITION</span>
+<h2 class="font-headline-lg text-primary mt-unit-sm">Credentials &amp; Affiliations</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center border-r border-zinc-100 last:border-none px-4">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">balance</span>
+<h3 class="font-serif text-xl font-bold text-primary mb-2">Supreme Court</h3>
+<p class="font-body-md text-on-surface-variant italic">Advocate of the Supreme Court of Nigeria</p>
+</div>
+<div class="text-center border-r border-zinc-100 last:border-none px-4">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">gavel</span>
+<h3 class="font-serif text-xl font-bold text-primary mb-2">NBA Member</h3>
+<p class="font-body-md text-on-surface-variant italic">Nigerian Bar Association Active Member</p>
+</div>
+<div class="text-center border-r border-zinc-100 last:border-none px-4">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">school</span>
+<h3 class="font-serif text-xl font-bold text-primary mb-2">Academic Excellence</h3>
+<p class="font-body-md text-on-surface-variant italic">LL.M. International Business Law</p>
+</div>
+</div>
+</section>
+<!-- Service Area: Interstate Practice -->
+<section class="relative bg-primary-container text-white p-16 overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10">
+<span class="material-symbols-outlined text-[400px] leading-none">map</span>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="font-label-caps text-on-primary-container mb-unit-md block">NATIONAL REACH</span>
+<h2 class="font-headline-lg mb-unit-md text-white">Interstate Practice Capability</h2>
+<p class="font-body-lg text-on-primary-container mb-unit-lg max-w-lg">
+    Our legal services transcend regional boundaries. Barrister Marshal Abubakar is authorized and equipped to provide expert legal representation and advisory across all 36 states of the Nigerian Federation and the FCT.
+</p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-primary px-4 py-2 border border-on-primary-container/30">
+<span class="font-label-caps text-[10px] text-white">ABUJA HEADQUARTERS</span>
+</div>
+<div class="bg-primary px-4 py-2 border border-on-primary-container/30">
+<span class="font-label-caps text-[10px] text-white">LAGOS ANNEX</span>
+</div>
+<div class="bg-primary px-4 py-2 border border-on-primary-container/30">
+<span class="font-label-caps text-[10px] text-white">PENT-STATE REACH</span>
+</div>
+</div>
+</div>
+<div class="flex justify-center">
+<div class="p-4 bg-white/5 backdrop-blur-sm border border-white/10">
+<img alt="Service Map" class="w-full h-auto grayscale brightness-125 mix-blend-screen" data-alt="Abstract minimalist topographic map of Nigeria showing state borders with glowing nodes representing key regional hubs, professional aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUoXao5n7r546pldLava91Sv96pAFnruMRf0CK2wHEgNYKc3vNNcvYinVAXvuRlCwA4VjfgZpu6LqAEiSvcVCv3yL3oB3f-ZgwoQ8B90smte-usfEChCqWJhQa1-8I29x69BfYUHz6FdHbTC2MoowP2gFY6btc5xilArAJEDNJ5xpmSkeyTCoZnyqPejTBHovsZY_d-69fb0X7c79RMfLFRkFJi1odUBXxhmlRkPKZnip0VlPkNSJL-O2G8bHGwl9NzwbqV9KQDKD"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 border-t border-zinc-200 flat no-shadow">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-20 max-w-[1440px] mx-auto text-slate-900 font-serif text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-slate-900 font-serif mb-4 block">Marshal Abubakar</span>
+<p class="text-zinc-600 mb-6">Providing intellectual rigor and authoritative counsel across the Nigerian federation.</p>
+<div class="flex gap-4">
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">The Chambers</h4>
+<p class="text-zinc-600">Suite 402, High Court Plaza<br/>Central Business District<br/>Abuja, Nigeria</p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Legal Disclaimer</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-600 hover:text-slate-900 underline underline-offset-4 transition-all duration-300" href="#">NBA Verification</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-primary">Hours</h4>
+<p class="text-zinc-600">Monday — Friday<br/>09:00 AM — 05:00 PM WAT</p>
+<div class="mt-6 flex items-center gap-2 text-amber-700 font-medium">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+<span class="font-label-caps text-[10px]">Open for Consultations</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-16 py-8 border-t border-zinc-200 text-center text-xs opacity-50 uppercase tracking-widest font-label-caps">
+    © 2026 Marshal Abubakar. All Rights Reserved. Authorized for Counsel in Nigeria.
+</div>
+</footer>
+
+<script>
+(function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const closeBtn = document.getElementById('sidebarClose');
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  menuToggle.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+})();
+</script>
+</body></html>
