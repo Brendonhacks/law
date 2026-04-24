@@ -22,12 +22,16 @@
         --color-primary: #000666;
         --color-secondary: #775a19;
         --color-secondary-fixed: #ffdea5;
+        --color-secondary-fixed-dim: #e9c176;
         --color-on-primary: #ffffff;
         --color-on-secondary: #ffffff;
         --color-on-secondary-container: #785a1a;
+        --color-on-secondary-fixed: #261900;
+        --color-on-secondary-fixed-variant: #5d4201;
         --color-secondary-container: #fed488;
         --color-surface-container: #eeeeee;
         --color-surface-container-lowest: #ffffff;
+        --color-surface-container-low: #f3f3f3;
         --color-surface-container-high: #e8e8e8;
         --color-surface-container-highest: #e2e2e2;
         --color-surface: #f9f9f9;
@@ -45,9 +49,6 @@
         --color-primary-fixed-dim: #bdc2ff;
         --color-on-primary-fixed: #000767;
         --color-on-primary-fixed-variant: #343d96;
-        --color-secondary-fixed-dim: #e9c176;
-        --color-on-secondary-fixed: #261900;
-        --color-on-secondary-fixed-variant: #5d4201;
         --color-tertiary: #0d1d24;
         --color-tertiary-container: #22323a;
         --color-on-tertiary: #ffffff;
@@ -178,10 +179,6 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
     }
-    .text-3xl {
-        font-size: 1.875rem;
-        line-height: 2.25rem;
-    }
     .text-4xl {
         font-size: 2.25rem;
         line-height: 2.5rem;
@@ -197,6 +194,9 @@
     }
     .tracking-tight {
         letter-spacing: -0.025em;
+    }
+    .tracking-\[0\.2em\] {
+        letter-spacing: 0.2em;
     }
     .font-bold {
         font-weight: 700;
@@ -241,6 +241,8 @@
     .text-slate-900 { color: var(--color-slate-900); }
     .text-amber-700 { color: var(--color-amber-700); }
     .text-on-primary-container { color: var(--color-on-primary-container); }
+    .text-on-tertiary { color: var(--color-on-tertiary); }
+    .text-on-tertiary-container { color: var(--color-on-tertiary-container); }
 
     .bg-primary { background-color: var(--color-primary); }
     .bg-secondary { background-color: var(--color-secondary); }
@@ -255,7 +257,6 @@
     .border-secondary { border-color: var(--color-secondary); }
     .border-outline-variant { border-color: var(--color-outline-variant); }
     .border-white\/10 { border-color: rgba(255,255,255,0.1); }
-    .border-white\/30 { border-color: rgba(255,255,255,0.3); }
     .border-zinc-100 { border-color: var(--color-zinc-100); }
     .border-zinc-200 { border-color: var(--color-zinc-200); }
     .border-amber-600 { border-color: var(--color-amber-600); }
@@ -284,11 +285,10 @@
     .mx-auto { margin-left: auto; margin-right: auto; }
     
     .px-16 { padding-left: 4rem; padding-right: 4rem; }
-    .px-12 { padding-left: 3rem; padding-right: 3rem; }
+    .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
     .px-8 { padding-left: 2rem; padding-right: 2rem; }
     .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
     .px-4 { padding-left: 1rem; padding-right: 1rem; }
-    .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
     .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
     .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
     .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
@@ -296,7 +296,6 @@
     .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
     .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
     .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-    .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
     .px-margin { padding-left: var(--spacing-margin); padding-right: var(--spacing-margin); }
     .py-unit-xl { padding-top: var(--spacing-unit-xl); padding-bottom: var(--spacing-unit-xl); }
     .p-16 { padding: 4rem; }
@@ -320,8 +319,6 @@
     .mt-unit-sm { margin-top: var(--spacing-unit-sm); }
     .mt-unit-xl { margin-top: var(--spacing-unit-xl); }
     .mt-6 { margin-top: 1.5rem; }
-    .-mr-32 { margin-right: -8rem; }
-    .-mt-32 { margin-top: -8rem; }
     .gap-unit-md { gap: var(--spacing-unit-md); }
     .gap-unit-xl { gap: var(--spacing-unit-xl); }
     .gap-gutter { gap: var(--spacing-gutter); }
@@ -393,6 +390,7 @@
     .duration-200 { transition-duration: 200ms; }
     .duration-300 { transition-duration: 300ms; }
     .hover\:bg-opacity-90:hover { opacity: 0.9; }
+    .hover\:bg-primary-container:hover { background-color: var(--color-primary-container); }
     .hover\:bg-white:hover { background-color: white; }
     .hover\:bg-primary:hover { background-color: var(--color-primary); }
     .hover\:text-primary:hover { color: var(--color-primary); }
@@ -407,7 +405,9 @@
     .pb-1 { padding-bottom: 0.25rem; }
     .pt-unit-xl { padding-top: var(--spacing-unit-xl); }
     .no-underline { text-decoration: none; }
+    .pointer-events-none { pointer-events: none; }
     .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .active\:opacity-70:active { opacity: 0.7; }
 
     /* Group hover */
     .group:hover .group-hover\:bg-secondary { background-color: var(--color-secondary); }
@@ -522,10 +522,11 @@
         .p-16 {
             padding: 2rem;
         }
-        .grid-cols-1.md\:grid-cols-2, .grid-cols-1.md\:grid-cols-3, .grid-cols-1.md\:grid-cols-4 {
+        .grid-cols-12 {
             grid-template-columns: 1fr;
         }
-        .md\:col-span-2, .md\:col-span-4, .md\:col-span-8 {
+        .col-span-12.md\:col-span-4,
+        .col-span-12.md\:col-span-8 {
             grid-column: span 1 / span 1;
         }
         .md\:w-1\/2 {
@@ -557,24 +558,67 @@
         .text-\[400px\] {
             font-size: 200px;
         }
+        .sticky {
+            position: relative;
+            top: auto;
+        }
     }
     @media (min-width: 769px) {
         .md\:flex { display: flex; }
+        .md\:inline-block { display: inline-block; }
         .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .md\:col-span-1 { grid-column: span 1 / span 1; }
         .md\:col-span-2 { grid-column: span 2 / span 2; }
         .md\:col-span-4 { grid-column: span 4 / span 4; }
         .md\:col-span-8 { grid-column: span 8 / span 8; }
         .md\:w-1\/2 { width: 50%; }
         .md\:flex-row { flex-direction: row; }
-        .md\:col-span-1 { grid-column: span 1 / span 1; }
+        .sticky {
+            position: sticky;
+        }
     }
+
+    .back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 99;
+    width: 48px;
+    height: 48px;
+    background-color: #000666;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #775a19;
+}
+
+.back-to-top .material-symbols-outlined {
+    font-size: 24px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
 </style>
 </head>
 <body class="bg-background text-on-background antialiased overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="bg-white docked full-width top-0 z-50 border-b border-zinc-200 flat no-shadow">
+<header class="bg-white border-b border-zinc-200 docked full-width top-0 z-50 flat no-shadow">
 <nav class="flex justify-between items-center w-full px-16 py-6 max-w-[1440px] mx-auto">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined" style="font-size: 32px; color: #000666;">balance</span>
@@ -588,7 +632,7 @@
 <a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="practiceareas.html">Practice Areas</a>
 <a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="casehighlights.html">Case Highlights</a>
 <a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="legalinsights.html">Insights</a>
-<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="contact.html">Contact</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-zinc-500 hover:text-amber-700 transition-colors duration-200 cursor-pointer" href="FAQ.html">FAQ</a>
 </div>
 <div class="flex items-center gap-4">
 <button class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 font-label-caps text-xs tracking-widest uppercase hover:bg-opacity-90 transition-all rounded-none" onclick="window.location.href='contact.html'">
@@ -609,7 +653,8 @@
 <a href="practiceareas.html">Practice Areas</a>
 <a href="casehighlights.html">Case Highlights</a>
 <a href="legalinsights.html">Insights</a>
-<a href="contact.html">Contact</a>
+<a href="FAQ.html">FAQ</a>
+<a href="contact.html">Contact Us</a>
 </div>
 </div>
 
@@ -742,6 +787,11 @@
 </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to Top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
 <script>
 (function() {
   const menuToggle = document.getElementById('menuToggle');
@@ -762,5 +812,28 @@
   closeBtn.addEventListener('click', closeSidebar);
   overlay.addEventListener('click', closeSidebar);
 })();
+
+// Back to Top Button
+(function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+})();
+
 </script>
 </body></html>
