@@ -572,6 +572,41 @@
         .md\:w-1\/2 { width: 50%; }
         .md\:flex-row { flex-direction: row; }
     }
+
+    .back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 99;
+    width: 48px;
+    height: 48px;
+    background-color: #000666;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #775a19;
+}
+
+.back-to-top .material-symbols-outlined {
+    font-size: 24px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
 </style>
 </head>
 <body class="bg-background">
@@ -750,6 +785,11 @@
 </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to Top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
 <script>
 (function() {
   const menuToggle = document.getElementById('menuToggle');
@@ -769,6 +809,28 @@
   menuToggle.addEventListener('click', openSidebar);
   closeBtn.addEventListener('click', closeSidebar);
   overlay.addEventListener('click', closeSidebar);
+})();
+
+// Back to Top Button
+(function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 })();
 </script>
 </body></html>
