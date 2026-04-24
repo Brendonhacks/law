@@ -306,6 +306,7 @@
     .mb-8 { margin-bottom: 2rem; }
     .mb-16 { margin-bottom: 4rem; }
     .mt-8 { margin-top: 2rem; }
+    .mt-6 { margin-top: 1.5rem; }
     .ml-2 { margin-left: 0.5rem; }
     .gap-2 { gap: 0.5rem; }
     .gap-4 { gap: 1rem; }
@@ -395,6 +396,39 @@
         outline: none;
         border-bottom-color: #775a19;
         border-bottom-width: 2px;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        z-index: 99;
+        width: 48px;
+        height: 48px;
+        background-color: #000666;
+        color: #ffffff;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .back-to-top:hover {
+        background-color: #775a19;
+    }
+    .back-to-top .material-symbols-outlined {
+        font-size: 24px;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
 
     /* ===== SIDEBAR STYLES ===== */
@@ -498,7 +532,13 @@
             line-height: 44px;
         }
         .p-12 { padding: 1.5rem; }
-        .pt-32 { padding-top: 4rem; }
+        .pt-32 { padding-top: 6rem; }
+        .back-to-top {
+            bottom: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+        }
     }
     @media (min-width: 769px) {
         .md\:flex { display: flex; }
@@ -712,6 +752,11 @@
 </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to Top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
 <script>
 (function() {
   const menuToggle = document.getElementById('menuToggle');
@@ -731,6 +776,26 @@
   menuToggle.addEventListener('click', openSidebar);
   closeBtn.addEventListener('click', closeSidebar);
   overlay.addEventListener('click', closeSidebar);
+})();
+
+// Back to Top Button
+(function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 })();
 </script>
 </body></html>
