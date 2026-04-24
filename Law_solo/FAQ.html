@@ -390,13 +390,46 @@
     .col-span-12 { grid-column: span 12 / span 12; }
 
     /* Scroll margin */
-    .scroll-mt-40 { scroll-margin-top: 10rem; }
+    .scroll-mt-24 { scroll-margin-top: 6rem; }
 
     /* Judicial line */
     .judicial-line {
         height: 1px;
         background: linear-gradient(90deg, transparent 0%, #775a19 50%, transparent 100%);
         opacity: 0.3;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        z-index: 99;
+        width: 48px;
+        height: 48px;
+        background-color: #000666;
+        color: #ffffff;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .back-to-top:hover {
+        background-color: #775a19;
+    }
+    .back-to-top .material-symbols-outlined {
+        font-size: 24px;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
 
     /* ===== SIDEBAR STYLES ===== */
@@ -504,9 +537,29 @@
             line-height: 36px;
         }
         .p-16 { padding: 2rem; }
-        .pt-32 { padding-top: 4rem; }
+        .pt-32 { padding-top: 6rem; }
         .mt-32 { margin-top: 4rem; }
         .space-y-24 > * + * { margin-top: 3rem; }
+        
+        .sticky {
+            position: relative !important;
+            top: auto !important;
+        }
+        
+        .mt-12 {
+            margin-top: 1.5rem;
+        }
+        
+        .scroll-mt-24 {
+            scroll-margin-top: 5rem;
+        }
+        
+        .back-to-top {
+            bottom: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+        }
     }
     @media (min-width: 769px) {
         .md\:flex { display: flex; }
@@ -595,7 +648,7 @@
 <!-- FAQ Lists -->
 <div class="col-span-12 md:col-span-9 space-y-24">
 <!-- General Inquiries -->
-<div class="scroll-mt-40" id="general">
+<div class="scroll-mt-24" id="general">
 <div class="flex items-center gap-unit-md mb-unit-lg">
 <span class="material-symbols-outlined text-secondary">gavel</span>
 <h2 class="font-headline-lg text-primary">General Inquiries</h2>
@@ -617,7 +670,7 @@
 </div>
 <div class="judicial-line"></div>
 <!-- Consultations -->
-<div class="scroll-mt-40" id="consultations">
+<div class="scroll-mt-24" id="consultations">
 <div class="flex items-center gap-unit-md mb-unit-lg">
 <span class="material-symbols-outlined text-secondary">calendar_month</span>
 <h2 class="font-headline-lg text-primary">Consultations</h2>
@@ -639,7 +692,7 @@
 </div>
 <div class="judicial-line"></div>
 <!-- Practice Specifics -->
-<div class="scroll-mt-40" id="practice">
+<div class="scroll-mt-24" id="practice">
 <div class="flex items-center gap-unit-md mb-unit-lg">
 <span class="material-symbols-outlined text-secondary">account_balance</span>
 <h2 class="font-headline-lg text-primary">Practice Specifics</h2>
@@ -664,7 +717,6 @@
 <!-- Final CTA Section -->
 <section class="max-w-[1440px] mx-auto px-margin mt-32">
 <div class="relative bg-primary p-16 overflow-hidden">
-<!-- Decorative Background Element -->
 <div class="absolute inset-0 opacity-10">
 <div class="w-full h-full" data-alt="close-up of traditional leather-bound law books and parchment paper in a dim academic setting with gold accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhqMdVMPHhOOQPvgvb_V-ZP0SQO8LrG8njC7ZIUfk5WMxS2nlMKjdwyB11KR7Gdqkh1dxmCF0bJqSUZQR4y_C5aPIk4TW7A38vnIXlBbhp8xNPtRKdeJOLh8N0cwd2N0vdmiC4gx4JkpruGDd_ffpufErUQsiLGliApOEcK_e60CAcfv3fs0sCK9H6v26YjsI2La9mZ6WPXZEkpw8FqontP7C8qYInAycvZztea6f0SAeCJBfUqrtTuFH0chxa8XB10m8EXgPjtah9'); background-size: cover; background-position: center;"></div>
 </div>
@@ -716,6 +768,11 @@
 </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to Top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
 <script>
 (function() {
   const menuToggle = document.getElementById('menuToggle');
@@ -735,6 +792,40 @@
   menuToggle.addEventListener('click', openSidebar);
   closeBtn.addEventListener('click', closeSidebar);
   overlay.addEventListener('click', closeSidebar);
+})();
+
+// Smooth scroll for FAQ sidebar links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Back to Top Button
+(function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 })();
 </script>
 </body></html>
